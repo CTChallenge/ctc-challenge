@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	 <head>
-		 <title>College Tech Challenge</title>
+		 <title>CSS</title>
 		 <meta charset="utf-8">
 		 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
 		 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
@@ -9,12 +9,14 @@
 		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		 <!-- CSS -->
+		 <link rel="stylesheet" type="text/css" href="Main.css" />
 	 </head>	 
 	 <body>
 
 
 		 <header>
-		     <h1>The Opiate Crisis</h1>
+		     <h1>Connecticut State Support</h1>
 		 </header>
  
 		 <!-- NAV -->
@@ -34,7 +36,7 @@
 				 <div class = "collapse navbar-collapse" id="myNavbar">
 					 <ul class="nav navbar-nav">
 						 <li class="active"><a href="">Home</a></li>
-						 <li><a href="../About.html">About</a></li>
+						 <li><a href="../Data.html">Data</a></li>
 					 </ul>
 					 <ul class = "nav navbar-nav navbar-right"> </ul>
 				 </div>
@@ -45,7 +47,7 @@
 			 <br>
 			 <br>
 			 <u>
-				 <p style="font-size:175%; text-align:center;">
+				 <p style="font-size:5vw; text-align:center;">
 						Challenge:  The Opiate Crisis
 				 </p>
 			 </u>
@@ -58,17 +60,23 @@
 			 </p>
 			 
 			 <br>
-			 <!-- <div id="googleMap" style="width:60%; height:150px; margin: auto;"></div>			 -->  
-			 <div id="googleMap" style="width:60%; height:200px; margin: auto;"></div>			  
-			 <br>
-			  
-			 <p style="font-size:125%; padding-left: 30px; text-indent:40px">	
-				 Your team is charged with creating an application that provides useful information to families and
-				 addicts in an integrated form.  For example, an application might provide an integrated geolocation
-				 based display of treatment resources available— or perhaps directions to the nearest Pharmacy
-				 equipped to distribute Naloxone.  The specific content you choose to display in your app, and the
-				 manner in which you display the content to the user is up to you and your team.
-			 </p>
+			 <div>
+				 <!-- Google Maps-->  
+				 <div id="googleMap" style="width:60%; height:40vh; float: left;border: 3px solid black;"></div>
+				 <!-- Marker Info-->  
+				 <div id = "markerInfo" style = "border: 3px solid black;">
+					 <p id="markerTitle" style="font-size:4vw; text-align:center; text-decoration: underline;height: 5vh;"> St. Vincent </p>
+					 
+					 <p id = "markerParagraph" style="font-size:2vw; text-indent:40px; border: 1px solid black; overflow-y : scroll; height: 32vh;" >
+						 Your team is charged with creating an application that provides useful information to families and
+						 addicts in an integrated form.  For example, an application might provide an integrated geolocation
+						 based display of treatment resources available— or perhaps directions to the nearest Pharmacy
+						 equipped to distribute Naloxone. The specific content you choose to display in your app, and the
+						 manner in which you display the content to the user is up to you and your team. Jason Adding text
+						 just to make sure that the scroll bar is working perfectly fine.
+					 </p>
+				 </div>
+			 </div>
 			 
 			 <br>
 		 </article>
@@ -76,15 +84,41 @@
 		 
 		 <script>
 			 function myMap() {
+			 
+				 //var Lat = 51.508742;
+				 var Lat = 41.3346328;
+				 var Long = -72.95088850000002;
+				 //var Long = -0.120850;
+				 var Zoom = 11;
+				 
 				 var mapProp= {
-					 center:new google.maps.LatLng(51.508742,-0.120850),
-					 zoom:5,
+					 center:new google.maps.LatLng(Lat,Long),
+					 zoom:Zoom,
 				 };
-				 var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+			 
+			 
+				 var x = document.getElementById("demo");
+				 if (navigator.geolocation) {
+					 navigator.geolocation.getCurrentPosition(showPosition);
+				 }
+				 else{
+					 console.log("Geolocation is not supported by this browser.");
+					 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+				 }
+					 
+				
+				 function showPosition(position){
+					 Lat = position.coords.latitude;
+					 Long = position.coords.longitude;
+					 mapProp.center = new google.maps.LatLng(Lat,Long);
+					 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+				 }
+				 //var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 			 }
-		 </script>
+		 </script>		 
 		 
 		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd1vXWCMZcCA4ch9wfB_qrxzgPiDb2icw&callback=myMap"></script>
 			 
 	 </body>
+	 <footer>Created by Group 404</footer>
 </html>
