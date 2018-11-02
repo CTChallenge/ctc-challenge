@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	 <head>
-		 <title>CSS</title>
+		 <title>CGS</title>
 		 <meta charset="utf-8">
 		 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
 		 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
@@ -14,9 +14,8 @@
 	 </head>	 
 	 <body>
 
-
 		 <header>
-		     <h1>Connecticut State Support</h1>
+		     <h1>Connecticut's Good Samaritan</h1>
 		 </header>
  
 		 <!-- NAV -->
@@ -45,7 +44,6 @@
 
 		 <article>
 			 <br>
-			 <br>
 			 <u>
 				 <p style="font-size:5vw; text-align:center;">
 						Challenge:  The Opiate Crisis
@@ -60,14 +58,16 @@
 			 </p>
 			 
 			 <br>
-			 <div>
+			 <div id = "mapAndInfoHolder">
 				 <!-- Google Maps-->  
-				 <div id="googleMap" style="width:60%; height:40vh; float: left;border: 3px solid black;"></div>
+				 <div id="googleMap" style="width:40vw; height:40vh; float: left;border: 3px solid black;"></div>
 				 <!-- Marker Info-->  
 				 <div id = "markerInfo" style = "border: 3px solid black;">
-					 <p id="markerTitle" style="font-size:4vw; text-align:center; text-decoration: underline;height: 5vh;"> St. Vincent </p>
+					 <p id="markerTitle" style="font-size:4vh; overflow: hidden; text-align:center;  border-bottom: 1px solid black; text-decoration: underline; height: 5vh;">
+						 St. Vincent
+					 </p>
 					 
-					 <p id = "markerParagraph" style="font-size:2vw; text-indent:40px; border: 1px solid black; overflow-y : scroll; height: 32vh;" >
+					 <p id = "markerParagraph" style="font-size:2vh; text-indent:40px; overflow-y : scroll; height: 32vh;" >
 						 Your team is charged with creating an application that provides useful information to families and
 						 addicts in an integrated form.  For example, an application might provide an integrated geolocation
 						 based display of treatment resources available— or perhaps directions to the nearest Pharmacy
@@ -79,8 +79,37 @@
 			 </div>
 			 
 			 <br>
+			 <br>
+			 
+			 <table style="width:95%">
+				 <col width="30%">
+				 <col width="25%">
+				 <col width="50%">
+				 <tr>
+					 <th  id='selfProjects' ></th>
+					 <th  id='selfProjects' >In Connecticut</th> 
+					 <th  id='selfProjects' >Description:</th>
+				 </tr>
+				 <tr> <!-- Number of Resources -->
+					 <td id='gameTitle'><a href="">Number of Resources</a></td>
+					 <td>555</td> 
+					 <td></td>
+				 </tr>
+				 <tr><!-- Dominoes -->
+					 <td  id='gameTitle'><a href=""></a></td>
+					 <td></td> 
+					 <td></td>
+				 </tr>
+			 </table>
+			 
+			 <br>
+			 <br>
 		 </article>
 		 
+		 <!-- Additional info for later
+					1. https://cvshealth.com/thought-leadership/naloxone-opioid-overdose-reversal-medication
+					2. https://www.cvs.com/content/prescription-drug-abuse/save-a-life
+		 -->
 		 
 		 <script>
 			 function myMap() {
