@@ -1,11 +1,18 @@
 
-header{
+h1{
 	 padding: 0.1em;
-	 color:rgb(0,204,225);
-	 background-color: black;
+	 /* background-color: DodgerBlue; */
+	 background-color: white;
 	 clear: left;
-	 font-size:18px;
+	 font-size: 6vw;
 	 text-align: center;
+	 
+	 /* https://css-tricks.com/adding-stroke-to-web-text/ */
+	 text-shadow:
+   -1px -1px 0 #656565,  
+    1px -1px 0 #656565,
+    -1px 1px 0 #656565,
+     1px 1px 0 #656565;
 }
 
 .center{
@@ -22,7 +29,7 @@ footer {
 	clear: left;
 	color: rgb(0,255,255);
 	background-color: black;
-	font-size:2.5vw;
+	font-size:2vw;
 	padding: 0.4em;
 	text-align: center;	
 }

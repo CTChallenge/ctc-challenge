@@ -15,7 +15,7 @@
 	 <body>
 
 		 <header>
-		     <h1>Connecticut's Good Samaritan</h1>
+		     <h1 id=title>Connecticut's Good Samaritan</h1>
 		 </header>
  
 		 <!-- NAV -->
@@ -34,8 +34,9 @@
 			
 				 <div class = "collapse navbar-collapse" id="myNavbar">
 					 <ul class="nav navbar-nav">
-						 <li class="active"><a href="">Home</a></li>
-						 <li><a href="../Data.html">Data</a></li>
+						 <li class="active"	style="font-size:2.5vh;"><a href="">Home</a></li>
+						 <li style="font-size:2.5vh;"><a href="../overdoseGuide.html">What to do?</a></li>
+						 <li style="font-size:2.5vh;"><a href="../Data.html">Data</a></li>
 					 </ul>
 					 <ul class = "nav navbar-nav navbar-right"> </ul>
 				 </div>
@@ -43,15 +44,13 @@
 		 </nav>
 
 		 <article>
-			 <br>
 			 <u>
-				 <p style="font-size:5vw; text-align:center;">
+				 <p style="font-size:4.75vw; text-align:center;">
 						Challenge:  The Opiate Crisis
 				 </p>
 			 </u>
-			 <br>
 		  
-			 <p style="font-size:125%; padding-left: 30px; text-indent:40px">
+			 <p style="font-size :2.4vh; padding-left: 30px; text-indent:40px">
 					The opiate crisis is a national problem— but one that has hit Connecticut particularly hard.
 				 The state, however, has a number of resources that are designed to help individuals and families
 				 that are struggling with addiction.
@@ -63,17 +62,28 @@
 				 <div id="googleMap" style="width:40vw; height:40vh; float: left;border: 3px solid black;"></div>
 				 <!-- Marker Info-->  
 				 <div id = "markerInfo" style = "border: 3px solid black;">
-					 <p id="markerTitle" style="font-size:4vh; overflow: hidden; text-align:center;  border-bottom: 1px solid black; text-decoration: underline; height: 5vh;">
+					 <p id="markerTitle" style="font-size:4vh; overflow: hidden; text-align:center; text-decoration: underline; height: 5vh;">
 						 St. Vincent
 					 </p>
 					 
-					 <p id = "markerParagraph" style="font-size:2vh; text-indent:40px; overflow-y : scroll; height: 32vh;" >
+					 <p id = "markerAddress" style="text-align:center; font-size:1.9vh; font-weight :bold; height: 1.5vh;">
+						 Address: 2800 Main St, Bridgeport, CT 06606
+					 </p>
+					 
+					 <p id = "markerParagraph" style="font-size:2vh; text-indent:40px ; overflow-y : scroll; height: 29vh;  border-top: 1px solid black; padding-left: 1vw;padding-right: 0.75vw;" >
 						 Your team is charged with creating an application that provides useful information to families and
 						 addicts in an integrated form.  For example, an application might provide an integrated geolocation
 						 based display of treatment resources available— or perhaps directions to the nearest Pharmacy
 						 equipped to distribute Naloxone. The specific content you choose to display in your app, and the
-						 manner in which you display the content to the user is up to you and your team. Jason Adding text
-						 just to make sure that the scroll bar is working perfectly fine.
+						 manner in which you display the content to the user is up to you and your team. <br><br>
+						 
+						 Jason Adding text  just to make sure that the scroll bar is working perfectly fine. Added a bit more
+						 text....... then a bit	 more.... then Jason added a lot more text just to ensure that everything was working
+						 fine. And eventually he added so much text that the text field scroll bar became the size of an ant.... 
+						 <br> <br>
+						 Unfortunately he was still not satisfied and continue to add more and more text. And This is why this
+						 paragraph is ridiculously long. Just so that Jason could efficiently test out the scroll bar feature and make
+						 sure it doesn't affect the layout. Yup.... that's the reason. Thank you for reading. 
 					 </p>
 				 </div>
 			 </div>
@@ -86,19 +96,24 @@
 				 <col width="25%">
 				 <col width="50%">
 				 <tr>
-					 <th  id='selfProjects' ></th>
-					 <th  id='selfProjects' >In Connecticut</th> 
-					 <th  id='selfProjects' >Description:</th>
+					 <th></th>
+					 <th>In Connecticut</th> 
+					 <th>Description:</th>
 				 </tr>
 				 <tr> <!-- Number of Resources -->
-					 <td id='gameTitle'><a href="">Number of Resources</a></td>
+					 <td>Number of Resources</td>
 					 <td>555</td> 
 					 <td></td>
 				 </tr>
 				 <tr><!-- Dominoes -->
-					 <td  id='gameTitle'><a href=""></a></td>
+					 <td></td>
 					 <td></td> 
 					 <td></td>
+				 </tr>
+				 <tr><!-- Additional Info -->
+					 <td colspan="3"  style="text-align:right; padding-right: 5%">
+						 <a href="../Data.html">Additional Info...</a>
+					 </td>
 				 </tr>
 			 </table>
 			 
@@ -111,7 +126,14 @@
 					2. https://www.cvs.com/content/prescription-drug-abuse/save-a-life
 		 -->
 		 
-		 <script>
+		 
+		 
+	 </body>
+	 <footer>Created by Group 404</footer>
+	 
+	 
+	 
+	 <script>
 			 function myMap() {
 			 
 				 //var Lat = 51.508742;
@@ -147,7 +169,58 @@
 		 </script>		 
 		 
 		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd1vXWCMZcCA4ch9wfB_qrxzgPiDb2icw&callback=myMap"></script>
+			
+	 
+	 
+	 <script>// Changes the Color of the Title
+			 //Original Source : https://stackoverflow.com/questions/38166466/multi-colored-text-using-only-css
+			 var message = document.getElementById("title").innerHTML;
+			 document.getElementById("title").innerHTML ="";			
+			 //var colorVariations = message.length-1;
+			 var messageLength = message.length;
+			 var colorVariations = message.length;
 			 
-	 </body>
-	 <footer>Created by Group 404</footer>
+			 var color1 = new Array (20,150,225); //RGB
+			 var color2 = new Array (50,750,0); //RGB
+			 
+			 for (var i = 0; i < messageLength; i++){
+				 document.getElementById("title").innerHTML = 
+					 document.getElementById("title").innerHTML + "<span style=\"color: rgb(" +
+						 (Math.floor(color1[0] - (color1[0]-color2[0])/colorVariations * i))+","+
+						 (Math.floor(color1[1] - (color1[1]-color2[1])/colorVariations * i))+","+
+						 (Math.floor(color1[2] - (color1[2]-color2[2])/colorVariations * i))+
+					 ");\">" + message[i] + "</span>";					 
+					 
+					 if( i == Math.floor((messageLength-2)/2)){
+						 //swap mid way
+						 var temp = color1.slice();
+						 color1 =  color2.slice(); //RGB
+						 color2 = temp.slice(); //RGB
+					 }
+						 
+				 }
+			 console.log( document.getElementById("title").innerHTML);
+		 </script>
+		 
+	 <!-- https://stackoverflow.com/questions/5309910/https-setup-in-amazon-ec2 -->
+	 <button onclick="myMap()">Get Location</button>
+	 <script>
+	  console.log("No!!!");
+		var x = document.getElementById("markerParagraph");
+		function getLocation() {
+			if (navigator.geolocation) {
+				 navigator.geolocation.getCurrentPosition(showPosition);
+			} else {
+				x.innerHTML = "Geolocation is not supported by this browser.";
+			}
+		}
+		function showPosition(position) {
+			x.innerHTML = "Latitude: " + position.coords.latitude + 
+			"   Longitude: " + position.coords.longitude; 
+			
+			console.log("Latitude: " + position.coords.latitude + "   Longitude: " + position.coords.longitude);
+		}
+	 </script>
+		 	 
+	 
 </html>
