@@ -52,17 +52,53 @@
 			 <!-- Intro Paragraph -->
 			 <p style="font-size :2.4vh; text-indent:40px; text-align:center;">
 				 Instructions on how to respond to an overdose by
-				 <a href="https://www.cvs.com/content/prescription-drug-abuse/save-a-life"> Cvs Pharmacy</a>.
+				 <a href="https://www.cvs.com/content/prescription-drug-abuse/save-a-life" style= "color:blue"> Cvs Pharmacy</a>.
 				 These five steps can save the lives of your friends and family, but additionally it can potentially
 				 save the lives of your neighbors, co-workers, classmates or even a complete stranger. <br>
 				 Here are the steps you need to be a Good Samaritan.
 			 </p>
 			 
 			 <br>
-			 <br>
-			 <br>
 			 
-			 <br>
+			 
+			 <table style="width:95%">
+				 <col width="10%">
+				 <col width="75%">
+				 <tr>
+					 <th colspan="2" style="font-size: 2.6vw; background-color: black; color:white">5 Steps</th>
+				 </tr>
+				 <tr> <!-- Step 1 -->
+					 <td style="font-size: 2.5vw; background-color: DodgerBlue;">
+						 <a onclick="style1Clicked()">Step 1</a>
+					 </td>
+					 <td id=stepsDisplay rowspan = "5" style="font-size :2vh; text-indent:6px; text-align:center; background-color: DodgerBlue;">
+						 <p id=step>Hi</p>
+					 </td> 
+				 </tr>
+				 <tr><!-- Steps 2 -->
+					 <td style="font-size: 2.5vw; background-color: lime;">
+						 <a onclick="style2Clicked()">Step 2</a>
+					 </td>
+				 </tr>
+				  <tr> <!-- Step 3 -->
+					 <td style="font-size: 2.5vw; background-color: yellow;">
+						 <a onclick="style3Clicked()">Step 3</a>
+					 </td>
+				 </tr>
+				 <tr><!-- Steps 4 -->
+					 <td style="font-size: 2.5vw; background-color: orange;">
+						 <a onclick="style4Clicked()">Step 4</a>
+					 </td>
+				 </tr>
+				 <tr><!-- Steps 5 -->
+					 <td style="font-size: 2.5vw; background-color: red;">
+						 <a onclick="style5Clicked()">Step 5</a>
+					 </td>
+				 </tr>
+			 </table>
+			 
+			 
+			 
 			 <br>
 		 </article>
 		 
@@ -74,11 +110,37 @@
 		 
 		 
 	 </body>
+	 
 	 <footer>Created by Group 404</footer>
 	 
 	 
-	 
-	 
+	 <script> //Changes the steps box display
+		 function style1Clicked() {
+			 <!-- Source: https://stackoverflow.com/questions/14319274/change-css-properties-on-click -->
+			 document.getElementById("stepsDisplay").innerHTML = "DodgerBlue";
+			 document.getElementById('stepsDisplay').style.cssText = 'background-color:DodgerBlue; color:#0c0800; border:1px solid #0c0800;';
+         }
+		 function style2Clicked() {
+			 <!-- Source: https://stackoverflow.com/questions/14319274/change-css-properties-on-click -->
+			 document.getElementById("stepsDisplay").innerHTML = "lime";
+			 document.getElementById('stepsDisplay').style.cssText = 'background-color:lime; color:#0c0800; border:1px solid #0c0800;';
+         }
+		 function style3Clicked() {
+			 <!-- Source: https://stackoverflow.com/questions/14319274/change-css-properties-on-click -->
+			 document.getElementById("stepsDisplay").innerHTML = "yellow";
+			 document.getElementById('stepsDisplay').style.cssText = 'background-color:yellow; color:#0c0800; border:1px solid #0c0800;';
+         }
+		 function style4Clicked() {
+			 <!-- Source: https://stackoverflow.com/questions/14319274/change-css-properties-on-click -->
+			 document.getElementById("stepsDisplay").innerHTML = "orange";
+			 document.getElementById('stepsDisplay').style.cssText = 'background-color:orange; color:#0c0800; border:1px solid #0c0800;';
+         }
+		 function style5Clicked() {
+			 <!-- Source: https://stackoverflow.com/questions/14319274/change-css-properties-on-click -->
+			 document.getElementById("stepsDisplay").innerHTML = "red";
+			 document.getElementById('stepsDisplay').style.cssText = 'background-color:red; color:#0c0800; border:1px solid #0c0800;';
+         }
+	 </script>
 	 
 	 <script>// Changes the Color of the Title
 			 //Original Source : https://stackoverflow.com/questions/38166466/multi-colored-text-using-only-css
@@ -107,7 +169,7 @@
 					 }
 						 
 				 }
-			 console.log( document.getElementById("title").innerHTML);
+			 <!-- console.log( document.getElementById("title").innerHTML); -->
 		 </script>
 		 
 </html>
