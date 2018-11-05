@@ -71,8 +71,17 @@
 					 <td style="font-size: 2.5vw; background-color: DodgerBlue;">
 						 <a onclick="style1Clicked()">Step 1</a>
 					 </td>
-					 <td id=stepsDisplay rowspan = "5" style="font-size :2vh; text-indent:6px; text-align:center; background-color: DodgerBlue;">
-						 <p id=step>Hi</p>
+					 <td id=stepsDisplay rowspan = "5" style="background-color: DodgerBlue; height: 25vw">
+						 <div id=stepTitle style="font-size :2.5vw; text-align:center;">Step 1: Identify the overdose</div>
+						 
+						 <p id=stepInstructions style = "font-size :1.9vw; text-indent:20px; text-align:justify; overflow-y : scroll; padding:5px">
+							 Opioids suppress the body's urge to breathe. If someone is not breathing
+							 or is struggling to breathe, try calling the person's name and rubbing your
+							 knuckles on his or her chest. If there's still no response, he or she could be
+							 experiencing an overdose. Other signs of overdose are blue or pale skin
+							 color, small pupils, low blood pressure, slow heartbeat, slow or shallow
+							 breathing, snoring sound, and gasping for breath.				 
+						 </p>
 					 </td> 
 				 </tr>
 				 <tr><!-- Steps 2 -->
@@ -80,7 +89,7 @@
 						 <a onclick="style2Clicked()">Step 2</a>
 					 </td>
 				 </tr>
-				  <tr> <!-- Step 3 -->
+				 <tr> <!-- Step 3 -->
 					 <td style="font-size: 2.5vw; background-color: yellow;">
 						 <a onclick="style3Clicked()">Step 3</a>
 					 </td>
@@ -117,28 +126,29 @@
 	 <script> //Changes the steps box display
 		 function style1Clicked() {
 			 <!-- Source: https://stackoverflow.com/questions/14319274/change-css-properties-on-click -->
-			 document.getElementById("stepsDisplay").innerHTML = "DodgerBlue";
-			 document.getElementById('stepsDisplay').style.cssText = 'background-color:DodgerBlue; color:#0c0800; border:1px solid #0c0800;';
+			 document.getElementById("stepTitle").innerHTML = "Step 1: Identify the Overdose";
+			 document.getElementById("stepInstructions").innerHTML = "Opioids suppress the body's urge to breathe. If someone is not breathing or is struggling to breathe, try calling the person's name and rubbing your knuckles on his or her chest. If there's still no response, he or she could be experiencing an overdose. Other signs of overdose are blue or pale skin color, small pupils, low blood pressure, slow heartbeat, slow or shallow breathing, snoring sound, and gasping for breath.";
+			 document.getElementById('stepsDisplay').style.cssText = 'background-color:DodgerBlue; color:#0c0800; border:1px solid #0c0800; height: 30vw';
          }
 		 function style2Clicked() {
-			 <!-- Source: https://stackoverflow.com/questions/14319274/change-css-properties-on-click -->
-			 document.getElementById("stepsDisplay").innerHTML = "lime";
-			 document.getElementById('stepsDisplay').style.cssText = 'background-color:lime; color:#0c0800; border:1px solid #0c0800;';
+			 document.getElementById("stepTitle").innerHTML = "Step 2: Call 9-1-1";
+			 document.getElementById("stepInstructions").innerHTML = "lime";
+			 document.getElementById('stepsDisplay').style.cssText = 'background-color:lime; color:#0c0800; border:1px solid #0c0800; height: 25vw';
          }
 		 function style3Clicked() {
-			 <!-- Source: https://stackoverflow.com/questions/14319274/change-css-properties-on-click -->
-			 document.getElementById("stepsDisplay").innerHTML = "yellow";
-			 document.getElementById('stepsDisplay').style.cssText = 'background-color:yellow; color:#0c0800; border:1px solid #0c0800;';
+			 document.getElementById("stepTitle").innerHTML = "Step 3: Give rescue breaths";
+			 document.getElementById("stepInstructions").innerHTML = "yellow";
+			 document.getElementById('stepsDisplay').style.cssText = 'background-color:yellow; color:#0c0800; border:1px solid #0c0800; height: 25vw';
          }
 		 function style4Clicked() {
-			 <!-- Source: https://stackoverflow.com/questions/14319274/change-css-properties-on-click -->
-			 document.getElementById("stepsDisplay").innerHTML = "orange";
-			 document.getElementById('stepsDisplay').style.cssText = 'background-color:orange; color:#0c0800; border:1px solid #0c0800;';
+			 document.getElementById("stepTitle").innerHTML = "Step 4: Give naloxone";
+			 document.getElementById("stepInstructions").innerHTML = "orange";
+			 document.getElementById('stepsDisplay').style.cssText = 'background-color:orange; color:#0c0800; border:1px solid #0c0800; height: 25vw';
          }
 		 function style5Clicked() {
-			 <!-- Source: https://stackoverflow.com/questions/14319274/change-css-properties-on-click -->
-			 document.getElementById("stepsDisplay").innerHTML = "red";
-			 document.getElementById('stepsDisplay').style.cssText = 'background-color:red; color:#0c0800; border:1px solid #0c0800;';
+			 document.getElementById("stepTitle").innerHTML = "Step 5: Stay until help arrives";
+			 document.getElementById("stepInstructions").innerHTML = "red";
+			 document.getElementById('stepsDisplay').style.cssText = 'background-color:red; color:#0c0800; border:1px solid #0c0800; height: 25vw';
          }
 	 </script>
 	 
