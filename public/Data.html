@@ -14,7 +14,6 @@
 	 </head>	 
 	 <body>
 
-
 		 <header style = "background-color: white;">
 		     <h1 id=title>Connecticut's Good Samaritan</h1>
 		 </header>
@@ -44,15 +43,12 @@
 		 </nav>
 
 		 <article>
-			 <u>
-				 <p style="font-size:4.75vw; text-align:center;">
+			 <p style="font-size:4.75vw; text-align:center; text-decoration: underline;">
 						Data
-				 </p>
-			 </u>
-			 <br>
+			 </p>
 		  
 			 <p style="font-size:125%; padding-left: 30px; text-indent:40px">
-					The opiate crisis is a national problem— but one that has hit Connecticut particularly hard.
+				 The opiate crisis is a national problem— but one that has hit Connecticut particularly hard.
 				 The state, however, has a number of resources that are designed to help individuals and families
 				 that are struggling with addiction.
 			 </p>
@@ -64,34 +60,33 @@
 	 <footer>Created by Group 404</footer>
 	 
 	 <script>// Changes the Color of the Title
-			 //Original Source : https://stackoverflow.com/questions/38166466/multi-colored-text-using-only-css
-			 var message = document.getElementById("title").innerHTML;
-			 document.getElementById("title").innerHTML ="";			
-			 //var colorVariations = message.length-1;
-			 var messageLength = message.length;
-			 var colorVariations = message.length;
-			 
-			 var color1 = new Array (20,150,225); //RGB
-			 var color2 = new Array (50,750,0); //RGB
-			 
-			 for (var i = 0; i < messageLength; i++){
-				 document.getElementById("title").innerHTML = 
-					 document.getElementById("title").innerHTML + "<span style=\"color: rgb(" +
-						 (Math.floor(color1[0] - (color1[0]-color2[0])/colorVariations * i))+","+
-						 (Math.floor(color1[1] - (color1[1]-color2[1])/colorVariations * i))+","+
-						 (Math.floor(color1[2] - (color1[2]-color2[2])/colorVariations * i))+
-					 ");\">" + message[i] + "</span>";					 
-					 
-					 if( i == Math.floor((messageLength-2)/2)){
-						 //swap mid way
-						 var temp = color1.slice();
-						 color1 =  color2.slice(); //RGB
-						 color2 = temp.slice(); //RGB
-					 }
-						 
+		 //Original Source : https://stackoverflow.com/questions/38166466/multi-colored-text-using-only-css
+		 var message = document.getElementById("title").innerHTML;
+		 document.getElementById("title").innerHTML ="";			
+		 //var colorVariations = message.length-1;
+		 var messageLength = message.length;
+		 var colorVariations = message.length;
+		 
+		 var color1 = new Array (20,150,225); //RGB
+		 var color2 = new Array (50,750,0); //RGB
+		 
+		 for (var i = 0; i < messageLength; i++){
+			 document.getElementById("title").innerHTML = 
+				 document.getElementById("title").innerHTML + "<span style=\"color: rgb(" +
+					 (Math.floor(color1[0] - (color1[0]-color2[0])/colorVariations * i))+","+
+					 (Math.floor(color1[1] - (color1[1]-color2[1])/colorVariations * i))+","+
+					 (Math.floor(color1[2] - (color1[2]-color2[2])/colorVariations * i))+
+				 ");\">" + message[i] + "</span>";					 
+				 
+				 if( i == Math.floor((messageLength-2)/2)){
+					 //swap mid way
+					 var temp = color1.slice();
+					 color1 =  color2.slice(); //RGB
+					 color2 = temp.slice(); //RGB
 				 }
-			 console.log( document.getElementById("title").innerHTML);
-		 </script>
+			 }
+		 <!-- console.log( document.getElementById("title").innerHTML); -->
+	 </script>
 		 
 	 
 </html>
