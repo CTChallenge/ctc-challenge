@@ -11,13 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/CTChallenge/ctc-challenge.git"
   },
-  "author": "Kenneth Koch, Tiffanie Edwards, Jason Young",
+  "author": "Kenneth Koch, Jason Young",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/CTChallenge/ctc-challenge/issues"
   },
   "homepage": "https://github.com/CTChallenge/ctc-challenge#readme",
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.18.0",
+    "express": "^4.16.4"
   }
 }
