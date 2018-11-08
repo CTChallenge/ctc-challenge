@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	 <head>
-		 <title>CGS</title>
+		 <title>CTGS</title>
 		 <meta charset="utf-8">
 		 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
 		 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
@@ -50,9 +50,9 @@
 			 </p>
 			 
 			 <!-- Intro Paragraph -->
-			 <p style="font-size :2.4vh; text-indent:40px; text-align:center;">
+			 <p style="font-size :2.7vw; text-indent:40px; text-align:center;">
 				 Instructions on how to respond to an overdose by
-				 <a href="https://www.cvs.com/content/prescription-drug-abuse/save-a-life" style= "color:blue"> Cvs Pharmacy</a>.
+				 <a href="https://www.cvs.com/content/prescription-drug-abuse/save-a-life" style= "color:blue;"> Cvs Pharmacy</a>.
 				 These five steps can save the lives of your friends and family, but additionally it can potentially
 				 save the lives of your neighbors, co-workers, classmates or even a complete stranger. <br>
 				 Here are the steps you need to be a Good Samaritan.
@@ -65,16 +65,16 @@
 				 <col width="10%">
 				 <col width="75%">
 				 <tr>
-					 <th colspan="2" style="font-size: 2.6vw; background-color: black; color:white">5 Steps</th>
+					 <th colspan="2" style="font-size: 3.2vw; background-color: black; color:white">Responding to an Overdose</th>
 				 </tr>
 				 <tr> <!-- Step 1 -->
-					 <td style="font-size: 2.5vw; background-color: DodgerBlue;">
+					 <td style="font-size: 2.9vw; background-color: DodgerBlue;">
 						 <a onclick="style1Clicked()">Step 1</a>
 					 </td>
-					 <td id=stepsDisplay rowspan = "5" style="background-color: DodgerBlue; height: 25vw">
-						 <div id=stepTitle style="font-size :2.5vw; text-align:center;">Step 1: Identify the overdose</div>
+					 <td id=stepsDisplay rowspan = "5" style="background-color: DodgerBlue;">
+						 <div id=stepTitle>Step 1: Identify the overdose</div>
 						 
-						 <p id=stepInstructions style = "font-size :1.9vw; text-indent:20px; text-align:justify; overflow-y : scroll; padding:5px">
+						 <p id=stepInstructions>
 							 Opioids suppress the body's urge to breathe. If someone is not breathing
 							 or is struggling to breathe, try calling the person's name and rubbing your
 							 knuckles on his or her chest. If there's still no response, he or she could be
@@ -85,22 +85,22 @@
 					 </td> 
 				 </tr>
 				 <tr><!-- Steps 2 -->
-					 <td style="font-size: 2.5vw; background-color: lime;">
+					 <td style="font-size: 2.9vw; background-color: lime;">
 						 <a onclick="style2Clicked()">Step 2</a>
 					 </td>
 				 </tr>
 				 <tr> <!-- Step 3 -->
-					 <td style="font-size: 2.5vw; background-color: yellow;">
+					 <td style="font-size: 2.9vw; background-color: yellow;">
 						 <a onclick="style3Clicked()">Step 3</a>
 					 </td>
 				 </tr>
 				 <tr><!-- Steps 4 -->
-					 <td style="font-size: 2.5vw; background-color: orange;">
+					 <td style="font-size: 2.9vw; background-color: orange;">
 						 <a onclick="style4Clicked()">Step 4</a>
 					 </td>
 				 </tr>
 				 <tr><!-- Steps 5 -->
-					 <td style="font-size: 2.5vw; background-color: red;">
+					 <td style="font-size: 2.9vw; background-color: red;">
 						 <a onclick="style5Clicked()">Step 5</a>
 					 </td>
 				 </tr>
@@ -128,26 +128,30 @@
 			 <!-- Source: https://stackoverflow.com/questions/14319274/change-css-properties-on-click -->
 			 document.getElementById("stepTitle").innerHTML = "Step 1: Identify the Overdose";
 			 document.getElementById("stepInstructions").innerHTML = "Opioids suppress the body's urge to breathe. If someone is not breathing or is struggling to breathe, try calling the person's name and rubbing your knuckles on his or her chest. If there's still no response, he or she could be experiencing an overdose. Other signs of overdose are blue or pale skin color, small pupils, low blood pressure, slow heartbeat, slow or shallow breathing, snoring sound, and gasping for breath.";
-			 document.getElementById('stepsDisplay').style.cssText = 'background-color:DodgerBlue; color:#0c0800; border:1px solid #0c0800; height: 30vw';
+			 document.getElementById('stepsDisplay').style.cssText = 'background-color:DodgerBlue; color:#0c0800; border:1px solid #0c0800; height: 25vw';
          }
 		 function style2Clicked() {
 			 document.getElementById("stepTitle").innerHTML = "Step 2: Call 9-1-1";
-			 document.getElementById("stepInstructions").innerHTML = "lime";
+			 document.getElementById("stepInstructions").innerHTML = "After identifying an overdose, get help as quickly as possible. Call 9-1-1. Make sure to say the person is unresponsive and not breathing or struggling to breathe. Give a clear address and location.";
 			 document.getElementById('stepsDisplay').style.cssText = 'background-color:lime; color:#0c0800; border:1px solid #0c0800; height: 25vw';
          }
 		 function style3Clicked() {
 			 document.getElementById("stepTitle").innerHTML = "Step 3: Give rescue breaths";
-			 document.getElementById("stepInstructions").innerHTML = "yellow";
+			 document.getElementById("stepInstructions").innerHTML = "Giving oxygen can save someone experiencing an overdose. Perform basic CPR:<div style='text-indent: 30px'>	•Make sure nothing is in the person's mouth that is blocking breathing.</div><div style='text-indent: 30px'> •Place one hand on the person's chin and tilt head back. Pinch his or her nose closed with the other hand.  </div><div style='text-indent: 30px'>•Administer 2 slow breaths and look for the person's chest to rise.  </div><div style='text-indent: 30px'>•Continue administering 1 breath every 5 seconds until the person starts breathing on his or her own.  </div><div style='text-indent: 30px'>•If the person is still unresponsive after repeating for 30 seconds, you can give naloxone.</div>";
 			 document.getElementById('stepsDisplay').style.cssText = 'background-color:yellow; color:#0c0800; border:1px solid #0c0800; height: 25vw';
          }
 		 function style4Clicked() {
 			 document.getElementById("stepTitle").innerHTML = "Step 4: Give naloxone";
-			 document.getElementById("stepInstructions").innerHTML = "orange";
+			 document.getElementById("stepInstructions").innerHTML = "Follow the instructions for the form of naloxone you have — injectable or nasal spray. Don't forget to give rescue breaths while you get ready.<br> <div style='text-indent: 15px'> After giving naloxone, continue giving rescue breaths, 1 breath every 5 seconds. If the person is still unresponsive in 2 to 3 minutes, you can give a second dose of naloxone. Continue breaths until emergency responders arrive.</div>";
 			 document.getElementById('stepsDisplay').style.cssText = 'background-color:orange; color:#0c0800; border:1px solid #0c0800; height: 25vw';
          }
 		 function style5Clicked() {
 			 document.getElementById("stepTitle").innerHTML = "Step 5: Stay until help arrives";
-			 document.getElementById("stepInstructions").innerHTML = "red";
+			 document.getElementById("stepInstructions").innerHTML = "Stay to make sure the person:<div style='text-indent: 30px'>•Doesn't go into withdrawal</div><div style='text-indent: 30px'>•Doesn't take more opioids, which could send him or her back into overdose</div><div style='text-indent: 30px'>•Doesn't go back into overdose and need additional doses of naloxone</div><div style='text-indent: 30px'>•Doesn't experience rapid or irregular heartbeat, chest pain, seizures, sudden stopping of the heart, hallucinations or loss of consciousness, all of which require immediate medical attention</div>";
+			 document.getElementById('stepsDisplay').style.cssText = 'background-color:red; color:#0c0800; border:1px solid #0c0800; height: 25vw';
+			 document.getElementById('stepsDisplay').style.cssText = 'background-color:red; color:#0c0800; border:1px solid #0c0800; height: 25vw';
+			 document.getElementById('stepsDisplay').style.cssText = 'background-color:red; color:#0c0800; border:1px solid #0c0800; height: 25vw';
+			 document.getElementById('stepsDisplay').style.cssText = 'background-color:red; color:#0c0800; border:1px solid #0c0800; height: 25vw';
 			 document.getElementById('stepsDisplay').style.cssText = 'background-color:red; color:#0c0800; border:1px solid #0c0800; height: 25vw';
          }
 	 </script>
