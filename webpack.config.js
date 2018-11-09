@@ -1,24 +1,29 @@
+const webpack = require('webpack');
+const path = require('path');
+
 module.exports = {
-  entry: './client/index.jsx',
+  entry: './client/index.js',
   output: {
     path: `${__dirname}/public`,
     filename: 'bundle.js',
   },
+  mode: 'development',
   devtool: 'source-map',
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader',
-        options: {
-          presets: ['react', 'env'], // if you aren't using 'babel-preset-env', then omit the 'env'
-        },
+        test: /\.html$/,
+        loader: 'file-loader?name=[name].[ext]',
       },
       {
-        test: /\.css/,
-        use: ['style-loader', 'css-loader'],
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['@babel/env', '@babel/react'],
+        },
       },
     ],
   },
 };
+
