@@ -22,9 +22,14 @@
     "chart.js": "^2.7.3",
     "express": "^4.16.4",
     "react": "^16.6.1",
-    "react-dom": "^16.6.1"
+    "react-dom": "^16.6.1",
+    "webpack": "^4.25.1"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "nodemon": "^1.18.6"
   }
 }
