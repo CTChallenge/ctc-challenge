@@ -120,7 +120,8 @@ nav li {
 }
 
 .col-sm-5 {
-	border: 3px solid black; 
+	border: 3px solid rgb(0, 0, 0); 
+	border-radius: 20px;
 	height:43vw; 
 	background-color: white; 
 	vertical-align: middle; 
@@ -140,7 +141,7 @@ nav li {
 }
 
 .EmergencyButton button {
-	font-size:6vh; 
+	font-size:4vh; 
 	font-family: Verdana, Tahoma, sans-serif;
 	margin-right:20px; 
 	border-radius: 20px;
