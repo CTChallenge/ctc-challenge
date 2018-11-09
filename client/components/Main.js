@@ -5,7 +5,6 @@ import Home from './home'
 
 const Main = () => (
   <div>
-    <h1>if you see this it worked</h1>
     <Home />
   </div>
 );
