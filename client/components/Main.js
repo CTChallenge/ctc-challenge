@@ -3,11 +3,11 @@ import Data from './data'
 import Home from './home'
 // import axios from axios;
 
-const Home = () => (
+const Main = () => (
   <div>
     <h1>if you see this it worked</h1>
-    <Data />
+    <Home />
   </div>
 );
 
-export default Home;
+export default Main;
