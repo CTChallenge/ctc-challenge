@@ -15,6 +15,9 @@ h1{
 		 1px 1px 0 #656565;
 }
 
+.EmergencyButton:hover {
+}
+
 .center{
 	 display: block;
 	 margin-left:auto;
