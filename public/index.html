@@ -5,6 +5,7 @@
 		 <meta charset="utf-8">
 		 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
 		 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
 		 <!-- Bootstrap -->
 		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -43,7 +44,7 @@
 					 </ul>
 					 
 					 <ul class="EmergencyButton nav navbar-nav  navbar-right">
-						 <button type="button" class="btn btn-danger navbar-btn" href="#" style="font-size:2vh; margin-right:20px; color:black">
+						 <button type="button" class="btn btn-danger navbar-btn" href="#" style="font-size:2vh; margin-right:20px; color:black" data-toggle="modal" data-target="#myModal">
 							 Emergency Overdose Crisis
 						 </button>
 					 </ul>
@@ -52,7 +53,45 @@
 			 </div>
 			 
 		 </nav>
-
+		 
+		 <!-- Modal -->
+		 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		     <div class="modal-dialog" role="document">
+				 <div class="modal-content">
+					 <div class="modal-header">
+						 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						 <h4 class="modal-title" id="myModalLabel">Emergency Overdose Crisis</h4>
+					 </div>
+					 <div class="modal-body">
+						 <p style="font-size:16px">Assuming that you already know that the person has overdosed and they are showing the following signs:<br>
+							 <ul>
+								 <li>Blue or pale skin color</li>
+								 <li>Small pupils</li>
+								 <li>Low blood pressure</li>
+								 <li>Slow heartbeat</li>
+								 <li>Slow or shallow breathing</li>
+								 <li>Gasping for breath</li>
+							 </ul>
+							 <br>
+							 <span style= "font-weight:bold; font-size:16px">Call 9-1-1 Immediately!!!</span><br>
+							 Give them a clear address and location for speedy assistance.
+							 
+							 
+							 
+							 
+							 
+							 
+							 
+						 </p> 
+					 </div>
+					 <div class="modal-footer">
+						 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					 </div>
+				 </div>
+		     </div>
+		 </div>
+		 
+		 
 		 <article>
 				 <p style="font-size:4.75vw; text-align:center;text-decoration: underline;">
 						Challenge:  The Opiate Crisis
@@ -137,6 +176,11 @@
 			 
 			 <br>
 			 <br>
+			 
+			 
+			 <script src="mapButtons.js" type="text/javascript">
+				 console.log("Started!");
+			 </script>
 			 
 			 <table style="width:95%">
 				 <col width="30%">
