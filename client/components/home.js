@@ -152,7 +152,7 @@ export default class Home extends Component {
   </div>
     <div style="float: left; padding-right: 15px;  background-color: black; " >
     <b>City: </b>
-    <input type="text" id="city" value="New Haven" style="text-indent:3px ; background-color: #f1f1f1;" />
+    <input type="text" id="city"  style="text-indent:3px ; background-color: #f1f1f1;" />
   </div>
     <div style="float: left; padding-right: 5px; vertical-align: text-bottom; background-color: black;">
     <b style="padding-right: 5px;">State: Connecticut</b>
