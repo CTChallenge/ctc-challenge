@@ -1,8 +1,8 @@
 
 h1{
 	 padding: 0.1em;
-	 /* background-color: DodgerBlue; */
-	 background-color: white;
+	 background-color: DodgerBlue;
+	 /* background-color: white; */
 	 clear: left;
 	 font-size: 6vw;
 	 text-align: center;
@@ -15,8 +15,6 @@ h1{
 		 1px 1px 0 #656565;
 }
 
-.EmergencyButton:hover {
-}
 
 .center{
 	 display: block;
@@ -90,4 +88,89 @@ a{
 
 a:hover {
     color: black;
+}
+
+nav li {
+	font-size:2.5vh;
+}
+
+#info {
+	font-size:2.4vh; 
+	padding-left: 30px; 
+	text-indent:40px;
+}
+
+#container-fluid {
+	border: 3px solid black; 
+	background-color: black; 
+}
+
+#button-container {
+	text-align:center; 
+	height:3vw;
+}
+
+#googleMap {
+	width:40vw; 
+	height:40vw; 
+	overflow: hidden; 
+	margin-left:auto; 
+	margin-right:auto; 
+	border: 3px solid black;
+}
+
+.col-sm-5 {
+	border: 3px solid black; 
+	height:43vw; 
+	background-color: white; 
+	vertical-align: middle; 
+	margin:0;
+}
+
+.align-middle {
+	height: 25%; 
+	overflow-y: scroll;
+}
+
+#markerTitle {
+	font-size:2.5vw; 
+	overflow: hidden; 
+	text-align:center; 
+	text-decoration: underline;
+}
+
+.EmergencyButton button {
+	font-size:6vh; 
+	font-family: Verdana, Tahoma, sans-serif;
+	margin-right:20px; 
+	border-radius: 20px;
+	color:rgb(255, 255, 255);
+}
+
+.modal p {
+	font-size:16px;
+}
+
+.modal span {
+	font-weight:bold; 
+	font-size:16px;
+}
+
+#title {
+	font-size:4.75vw; 
+	text-align:center;
+	text-decoration: underline;
+}
+
+#markerAddress {
+	text-align:center;
+	font-size:1.6vw;
+}
+
+#markerParagraph {
+	font-size:1.55vw;
+	text-indent:40px; 
+	overflow-y : scroll; 
+	height: 75%; 
+	border-top: 1px solid black;
 }
