@@ -105,17 +105,23 @@ nav li {
 	background-color: black; 
 }
 
-
+.container-fluid button {
+	color:DodgerBlue; 
+	font-size :2vw; 
+	font-weight :bold;
+	z-index: 0;
+	/* border-radius: 5px; */
+}
 
 #button-container {
 	text-align:center; 
 	height:3vw;
-	z-index: 1000;
+	margin-bottom: 10px;
 }
 
 #googleMap {
 	position: relative;
-	width:90vw; 
+	width:60vw; 
 	height:70vh; 
 	overflow: hidden; 
 	margin-left:auto; 
@@ -126,13 +132,15 @@ nav li {
 }
 
 .col-sm-5 {
-	border: 3px solid rgb(0, 0, 0); 
+	border: 3px solid rgb(0, 0, 0);
+	margin-top: 3.67%;
 	position: relative;
 	border-radius: 20px;
-	height:30vw; 
-	background-color: white; 
-	vertical-align: middle; 
-	margin:auto;
+	height: 70vh;
+	width: 25vw;
+	background-color: white;
+	vertical-align: middle;
+	margin-left: 3%;
 }
 
 .align-middle {
@@ -182,3 +190,8 @@ nav li {
 	height: 75%; 
 	border-top: 1px solid black;
 }
+
+/* .navbar {
+	position: fixed;
+	width: 100vw;
+} */

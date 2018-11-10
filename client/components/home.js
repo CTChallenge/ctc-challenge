@@ -102,12 +102,11 @@ export default class Home extends Component {
           <div className="container-fluid">
             <div className="row">
               {/* <!-- Google Maps Section--> */}
-              <div className="col-sm-7">
+              <div className="col-sm-8">
                 {/* <!-- Buttons --> */}
                 <div id="button-container">
                   <button>Naloxone</button>
-                  <button >Clinics</button>
-                  <button>Overdoses</button>
+                  <button>Treatment Centers</button>
                 </div>
                 <div id="googleMap">
                 <MapContainer />
