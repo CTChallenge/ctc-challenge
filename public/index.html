@@ -60,9 +60,10 @@
 				 <div class="modal-content">
 					 <div class="modal-header">
 						 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						 <h4 class="modal-title" id="myModalLabel">Emergency Overdose Crisis</h4>
+						 <h4 class="modal-title" id="myModalLabel" style= "font-weight:bold;">Emergency Overdose Crisis</h4>
 					 </div>
 					 <div class="modal-body">
+						 <!-- Assuming -->
 						 <p style="font-size:16px">Assuming that you already know that the person has overdosed and they are showing the following signs:<br>
 							 <ul>
 								 <li>Blue or pale skin color</li>
@@ -72,16 +73,28 @@
 								 <li>Slow or shallow breathing</li>
 								 <li>Gasping for breath</li>
 							 </ul>
-							 <br>
-							 <span style= "font-weight:bold; font-size:16px">Call 9-1-1 Immediately!!!</span><br>
+						 </p>
+						 <br>
+						 <!-- Call 9-1-1 -->
+						 <p style="font-size:16px">
+							 <!-- Trigger Call Source: https://stackoverflow.com/questions/1608548/how-to-trigger-a-phone-call-when-clicking-a-link-in-a-web-page-on-mobile-phone -->
+							 <!-- <span style= "font-weight:bold">Call <a href="tel:203-455-6056" style= "color:red;">9-1-1</a> Immediately!!!</span><br> -->
+							 <span style= "font-weight:bold">Call <button type="button" class="btn btn-danger" href="tel:203-455-6056" style="color:black"> 9-1-1 </button> Immediately!!!</span><br>
 							 Give them a clear address and location for speedy assistance.
-							 
-							 
-							 
-							 
-							 
-							 
-							 
+						 </p>
+						 <br>
+						 <!-- Basic CPR-->
+						 <p style="font-size:16px">	 
+							 After calling the Police...<br>
+
+							 Wait with the person and perform basic CPR<br>
+							 <ul>
+								 <li>Make sure nothing is in the person's mouth that is blocking breathing</li>
+								 <li>Place one hand on the person's chin and tilt head back. Pinch his or her nose closed with the other hand
+								 <li>Administer 2 slow breaths and look for the person's chest to rise
+								 <li>Continue administering 1 breath every 5 seconds until the person starts breathing on his or her own
+								 <li>If the person is still unresponsive after repeating for 30 seconds, you can give them Naloxone
+							 </ul>
 						 </p> 
 					 </div>
 					 <div class="modal-footer">
@@ -90,6 +103,18 @@
 				 </div>
 		     </div>
 		 </div>
+		 
+		 <!-- Source: https://www.youtube.com/watch?v=nJmcqK-ZGvg -->
+		 <div id="google_translate_element"></div>
+		 <script type="text/javascript">
+			 function googleTranslateElementInit() {
+				 new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			 }
+		 </script>
+		 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+					
+					 
+		 
 		 
 		 
 		 <article>
