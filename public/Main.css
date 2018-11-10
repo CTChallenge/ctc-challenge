@@ -1,19 +1,15 @@
 
-h1{
-	 padding: 0.1em;
-	 background-color: DodgerBlue;
-	 /* background-color: white; */
-	 clear: left;
-	 font-size: 6vw;
-	 text-align: center;
-	 
-	 /* https://css-tricks.com/adding-stroke-to-web-text/ */
-	 text-shadow:
-		 -1px -1px 0 #656565,  
-		 1px -1px 0 #656565,
-		 -1px 1px 0 #656565,
-		 1px 1px 0 #656565;
+
+
+html, body {
+    margin: 0;
+	height: 100%;
+	background-color: #263238;
 }
+
+
+
+
 
 
 .center{
@@ -101,8 +97,18 @@ nav li {
 }
 
 .container-fluid {
-	border: 3px solid black; 
-	background-color: black; 
+	/* border: 3px solid black;  */
+	/* background-color: black;  */
+	/* position: relative; */
+}
+
+
+#main-content {
+	position: relative;
+	top: 15vh;
+	/* background-color: #37474F; */
+	border: 0px;
+	padding-bottom: 5vh;
 }
 
 .container-fluid button {
@@ -119,6 +125,10 @@ nav li {
 	margin-bottom: 10px;
 }
 
+/* #button-container button {
+	background-color: #1abc9c;
+} */
+
 #googleMap {
 	position: relative;
 	width:60vw; 
@@ -127,12 +137,12 @@ nav li {
 	margin-left:auto; 
 	margin-right:auto;
 	/* padding-right: 20px;  */
-	border: 3px solid black;
+	border: 3px solid #00E5FF;
 	border-radius: 20px;
 }
 
 .col-sm-5 {
-	border: 3px solid rgb(0, 0, 0);
+	border: 3px solid #00E676;
 	margin-top: 3.67%;
 	position: relative;
 	border-radius: 20px;
@@ -155,12 +165,21 @@ nav li {
 	text-decoration: underline;
 }
 
-.EmergencyButton button {
-	font-size:4vh; 
+#emergency {
+	font-size:5vh; 
 	font-family: Verdana, Tahoma, sans-serif;
-	margin-right:20px; 
-	border-radius: 20px;
+	/* margin-right:20px;  */
+	position: fixed;
+	bottom: 0px;
+	/* border-radius: 20px; */
 	color:rgb(255, 255, 255);
+	display: none;
+}
+
+#emergency-top {
+	font-size:2vh; 
+	margin-right:20px; 
+	color:black;
 }
 
 .modal p {
@@ -173,9 +192,25 @@ nav li {
 }
 
 #title {
-	font-size:4.75vw; 
+	font-size:4vw; 
 	text-align:center;
-	text-decoration: underline;
+	font-family: Verdana, Tahoma, sans-serif;
+	position: relative;
+	top:80px;
+	margin:auto;
+	color: #95a5a6;
+}
+
+#description {
+	font-size: 1.5vw;
+	text-align: center;
+	font-family: Verdana, Tahoma, sans-serif;
+	position: relative;
+	color: #BBDEFB;
+	margin: auto;
+	padding-right: 20px;
+	padding-left: 20px;
+	top: 130px;
 }
 
 #markerAddress {
@@ -191,7 +226,16 @@ nav li {
 	border-top: 1px solid black;
 }
 
-/* .navbar {
+.navbar {
 	position: fixed;
 	width: 100vw;
-} */
+	border: 0px;
+}
+
+/* .navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+.navbar-brand {float:none;} */

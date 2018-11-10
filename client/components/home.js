@@ -12,19 +12,16 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://data.ct.gov/resource/deaths.json')
-      .then((res) => {
-        console.log(res.data);
-      });
+    // axios.get('https://data.ct.gov/resource/deaths.json')
+    //   .then((res) => {
+    //     console.log(res.data);
+    //   });
   }
 
 
   render() {
     return (
       <div>
-        <header>
-          <h1 id="title">Connecticut's Good Samaritan</h1>
-        </header>
         <nav className="navbar navbar-inverse navbar-static-top">
           <div className="container-fluid">
             <div className="navbar-header">
@@ -41,23 +38,25 @@ export default class Home extends Component {
             </div>
 
             <div className="collapse navbar-collapse" id="myNavbar">
-              <ul className="nav navbar-nav">
-                <li className="active"><a href="">Home</a></li>
-                <li><a href="../overdoseGuide.html">What to do?</a></li>
-                <li><a href="../Data.html">Data</a></li>
+              <ul className="nav nav-pills navbar-nav">
+                <li className="nav-item active"><a href="">Home</a></li>
+                <li className="nav-item"><a href="../overdoseGuide.html">What to do?</a></li>
+                <li className="nav-item"><a href="../Data.html">Data</a></li>
               </ul>
 
               <ul className="EmergencyButton nav navbar-nav  navbar-right">
-                <button type="button" className="btn btn-danger navbar-btn" href="#" data-toggle="modal" data-target="#myModal">
+						 <button id="emergency-top" type="button" className="btn btn-danger navbar-btn" href="#"  data-toggle="modal" data-target="#myModal">
 							 Emergency Overdose Crisis
-                </button>
-              </ul>
+						 </button>
+					 </ul>
 
             </div>
           </div>
 
         </nav>
 
+          <h1 id="title">Connecticut's Good Samaritan</h1>
+          <h4 id="description">If you or a loved one is struggling with opioid addiction, we want to help.<br />Check out the map below to find resources near you.</h4>
         
 
         {/* <!-- Modal --> */}
@@ -89,17 +88,9 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-          <p id="title">
-						Challenge:  The Opiate Crisis
-          </p>
-          <p id="info">
-					 The opiate crisis is a national problem— but one that has hit Connecticut particularly hard.
-				 The state, however, has a number of resources that are designed to help individuals and families
-				 that are struggling with addiction.
-          </p>
           <br />
           {/* <!-- Source : https://www.w3schools.com/html/html_responsive.asp --> */}
-          <div className="container-fluid">
+          <div id="main-content" className="container-fluid">
             <div className="row">
               {/* <!-- Google Maps Section--> */}
               <div className="col-sm-8">
@@ -143,15 +134,14 @@ export default class Home extends Component {
 							 sure it doesn't affect the layout. Yup.... that's the reason. Thank you for reading.
     </p>
 
+
               </div>
+    <button id="emergency" type="button" className="btn btn-danger btn-lg btn-block" href="#" data-toggle="modal" data-target="#myModal">
+   Emergency Overdose Crisis
+    </button>
 
   </div>
   </div>
-
-            <br />
-            <br />
-
-
       </div>
     );
   }
