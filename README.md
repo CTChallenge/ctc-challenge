@@ -7,7 +7,7 @@ A site that provides useful instructions for an Overdose Crisis. Although this s
 ##  Table of Contents
 + [Features](https://github.com/CTChallenge/ctc-challenge#Features)
 + [Tools](https://github.com/CTChallenge/ctc-challenge#Tools)
-+ [Information Sources](https://github.com/CTChallenge/ctc-challenge#Information Sources)
++ [Information Sources](https://github.com/CTChallenge/ctc-challenge#Information_Sources)
 
 ##  Features
 + Show nearby Naloxone providers and Health Clinics
