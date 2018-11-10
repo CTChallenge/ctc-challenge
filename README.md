@@ -1,1 +1,2 @@
-# ctc-challenge
+# Connecticut's Good Samaritan
+
