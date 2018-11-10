@@ -99,7 +99,7 @@ export default class Home extends Component {
           </p>
           <br />
           {/* <!-- Source : https://www.w3schools.com/html/html_responsive.asp --> */}
-          <div className="container">
+          <div className="container-fluid">
             <div className="row">
               {/* <!-- Google Maps Section--> */}
               <div className="col-sm-7">
@@ -108,6 +108,9 @@ export default class Home extends Component {
                   <button>Naloxone</button>
                   <button >Clinics</button>
                   <button>Overdoses</button>
+                </div>
+                <div id="googleMap">
+                <MapContainer />
                 </div>
                 {/* <!-- Google Map Display --> */}
               </div>
