@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-filename-extension */
 import React, { Component } from 'react';
 import axios from 'axios';
+import MapContainer from './mapContainer'
 
 export default class Home extends Component {
   constructor() {
@@ -57,6 +58,8 @@ export default class Home extends Component {
 
         </nav>
 
+        
+
         {/* <!-- Modal --> */}
         <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div className="modal-dialog" role="document">
@@ -86,7 +89,6 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        <article>
           <p id="title">
 						Challenge:  The Opiate Crisis
           </p>
@@ -97,7 +99,7 @@ export default class Home extends Component {
           </p>
           <br />
           {/* <!-- Source : https://www.w3schools.com/html/html_responsive.asp --> */}
-          <div className="container-fluid">
+          <div className="container">
             <div className="row">
               {/* <!-- Google Maps Section--> */}
               <div className="col-sm-7">
@@ -108,10 +110,9 @@ export default class Home extends Component {
                   <button>Overdoses</button>
                 </div>
                 {/* <!-- Google Map Display --> */}
-                <div id="googleMap"/>
               </div>
 
-              <div className="col-sm-5 align-middle">
+              <div className="col-sm-5 align-right">
                 {/* <!-- Name of the Marker, Address and Hours --> */}
                 <div className="align-middle">
                   <p id="markerTitle">
@@ -149,7 +150,6 @@ export default class Home extends Component {
             <br />
 
 
-        </article>
       </div>
     );
   }

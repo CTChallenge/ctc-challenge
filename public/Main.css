@@ -108,16 +108,17 @@ nav li {
 #button-container {
 	text-align:center; 
 	height:3vw;
+	z-index: 0;
 }
 
-#googleMap {
+/* #googleMap {
 	width:40vw; 
 	height:40vw; 
 	overflow: hidden; 
 	margin-left:auto; 
-	margin-right:auto; 
+	margin-right:500px; 
 	border: 3px solid black;
-}
+} */
 
 .col-sm-5 {
 	border: 3px solid rgb(0, 0, 0); 
