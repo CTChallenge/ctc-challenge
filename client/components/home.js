@@ -54,9 +54,10 @@ export default class Home extends Component {
           </div>
 
         </nav>
-
+          <div>
           <h1 id="title">Connecticut's Good Samaritan</h1>
           <h4 id="description">If you or a loved one is struggling with opioid addiction, we want to help.<br />Check out the map below to find resources near you.</h4>
+          </div>
         
 
         {/* <!-- Modal --> */}
