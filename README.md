@@ -5,10 +5,9 @@ Linked to the Site: [Web Site](http://ec2-54-86-219-164.compute-1.amazonaws.com:
 A site that provides useful instructions for an Overdose Crisis. Although this site is focused on the Connecticut Area.
 
 ##  Table of Contents
-+ Features
-+ Tools
-+ Information Sources
-
++ [Features](https://github.com/CTChallenge/ctc-challenge#Features)
++ [Tools](https://github.com/CTChallenge/ctc-challenge#Tools)
++ [Information Sources](https://github.com/CTChallenge/ctc-challenge#Information Sources)
 
 ##  Features
 + Show nearby Naloxone providers and Health Clinics
