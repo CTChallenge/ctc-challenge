@@ -1,8 +1,8 @@
 # Connecticut's Good Samaritan
-## [Web Site](http://ec2-54-86-219-164.compute-1.amazonaws.com:9000/)
+Linked to the Site: [Web Site](http://ec2-54-86-219-164.compute-1.amazonaws.com:9000/)
 
 ##  Introduction
-
+A site that provides useful instructions for an Overdose Crisis. Although this site is focused on the Connecticut Area.
 
 ##  Table of Contents
 + Features
