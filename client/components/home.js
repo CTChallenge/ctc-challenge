@@ -49,7 +49,7 @@ export default class Home extends Component {
             </div>
 
             <div className="collapse navbar-collapse" id="myNavbar">
-              <ul className="nav nav-pills navbar-nav">
+              <ul className="nav navbar-nav">
                 <li className="nav-item active"><a href="">Home</a></li>
                 <li className="nav-item"><a href="../overdoseGuide.html">What to do?</a></li>
                 <li className="nav-item"><a href="../Data.html">Data</a></li>
