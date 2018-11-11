@@ -2,13 +2,24 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import MapContainer from './mapContainer'
+import {Button, Modal} from 'react-bootstrap';
 
 export default class Home extends Component {
   constructor() {
     super();
+    this.handleShow = this.handleShow.bind(this);
+    this.handleClose = this.handleClose.bind(this);
     this.state = {
-
+      show: false,
     };
+  }
+
+  handleClose() {
+    this.setState({ show: false });
+  }
+
+  handleShow() {
+    this.setState({ show: true });
   }
 
   componentDidMount() {
@@ -45,7 +56,7 @@ export default class Home extends Component {
               </ul>
 
               <ul className="EmergencyButton nav navbar-nav  navbar-right">
-						 <button id="emergency-top" type="button" className="btn btn-danger navbar-btn" href="#"  data-toggle="modal" data-target="#myModal">
+						 <button id="emergency-top" type="button" className="btn btn-danger navbar-btn" href="#"  onClick={this.handleShow}>
 							 Emergency Overdose Crisis
 						 </button>
 					 </ul>
@@ -61,14 +72,14 @@ export default class Home extends Component {
         
 
         {/* <!-- Modal --> */}
-        <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <Modal show={this.state.show} onHide={this.handleClose}>
           <div className="modal-dialog" role="document">
-            <div className="modal-content">
-              <div className="modal-header">
+            
+              <Modal.Header>
                 <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 className="modal-title" id="myModalLabel">Emergency Overdose Crisis</h4>
-              </div>
-              <div className="modal-body">
+                <Modal.Title>Emergency Overdose Crisis</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
                 <p>Assuming that you already know that the person has overdosed and they are showing the following signs:</p>
                   <ul>
                     <li>Blue or pale skin color</li>
@@ -82,13 +93,13 @@ export default class Home extends Component {
                   <span>Call 9-1-1 Immediately!!!</span><br />
 							 <p>Give them a clear address and location for speedy assistance.
                </p>
-              </div>
-              <div className="modal-footer">
-                <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
+              </Modal.Body>
+              <Modal.Footer>
+                <button type="button" className="btn btn-default" onClick={this.handleClose}>Close</button>
+              </Modal.Footer>
+          
           </div>
-        </div>
+        </Modal>
           <br />
           {/* <!-- Source : https://www.w3schools.com/html/html_responsive.asp --> */}
           <div id="main-content" className="container-fluid">
