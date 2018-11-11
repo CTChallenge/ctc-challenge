@@ -1,6 +1,7 @@
 // Using express: http://expressjs.com/
 const express = require('express');
 const path = require('path')
+require('dotenv').config();
 // Create the app
 const app = express();
 
