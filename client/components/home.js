@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import MapContainer from './mapContainer'
-import {Button, Modal} from 'react-bootstrap';
+import {Button, Modal, Navbar, Nav, NavItem} from 'react-bootstrap';
 
 export default class Home extends Component {
   constructor() {
@@ -33,40 +33,33 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-inverse navbar-static-top">
-          <div className="container-fluid">
-            <div className="navbar-header">
-              {/* <!-- <a href="../Data.html" style="font-size:2.5vh;color:red; margin-right:30px">Overdose Crisis</a> --> */}
+        <Navbar inverse fixedTop fluid>
+        <Navbar.Header>
+              <Navbar.Brand>Connecticut's Good Samaritan</Navbar.Brand>
+          <Navbar.Toggle />
+        </Navbar.Header>
+          <Navbar.Collapse>
+            <Nav>
+                <NavItem href="#">Home</NavItem>
+                <NavItem href="../overdoseGuide.html">What to do?</NavItem>
+                <NavItem href="../Data.html">Data</NavItem>
+              
+            </Nav>
+              <Nav pullRight>
+              <NavItem>
+                <button id="emergency-top" type="button" className="btn btn-danger navbar-btn" href="#"  onClick={this.handleShow}>
+							    Overdose/Emergency
+                </button>
+                </NavItem>
+                </Nav>
 
-              <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                {/* <!-- Gives me the lines in the button--> */}
-                <span className="icon-bar" />
-                <span className="icon-bar" />
-                <span className="icon-bar" />
-              </button>
-              {/* <!--<a class="navbar-brand" href="#" id="demo">Username:</a>--> */}
+          </Navbar.Collapse>
 
-            </div>
+        </Navbar>
 
-            <div className="collapse navbar-collapse" id="myNavbar">
-              <ul className="nav navbar-nav">
-                <li className="nav-item active"><a href="">Home</a></li>
-                <li className="nav-item"><a href="../overdoseGuide.html">What to do?</a></li>
-                <li className="nav-item"><a href="../Data.html">Data</a></li>
-              </ul>
 
-              <ul className="EmergencyButton nav navbar-nav  navbar-right">
-						 <button id="emergency-top" type="button" className="btn btn-danger navbar-btn" href="#"  onClick={this.handleShow}>
-							 Emergency Overdose Crisis
-						 </button>
-					 </ul>
-
-            </div>
-          </div>
-
-        </nav>
           <div>
-          <h1 id="title">Connecticut's Good Samaritan</h1>
+          
           <h4 id="description">If you or a loved one is struggling with opioid addiction, we want to help.<br />Check out the map below to find resources near you.</h4>
           </div>
         
