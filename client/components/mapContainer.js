@@ -6,11 +6,13 @@ export class MapContainer extends Component {
   constructor() {
     super();
     
+    //default to view whole state, re-render to current location when allow location access is selected by user
     this.state = {
       currentLocation: {
-        lat: 41.7658,
-        lng: -72.6734,
-      }
+        lat: 41.701822,
+        lng: -72.656391,
+      },
+      zoom: 9,
     };
   }
 
@@ -24,7 +26,8 @@ export class MapContainer extends Component {
               currentLocation: {
                   lat: coords.latitude,
                   lng: coords.longitude
-              }
+              },
+              zoom: 14,
           })
       })
   }
@@ -33,7 +36,7 @@ export class MapContainer extends Component {
 
   render() {
     return (
-      <Map google={this.props.google} zoom={14} 
+      <Map google={this.props.google} zoom={this.state.zoom} 
         initialCenter={{
           lat: this.state.currentLocation.lat,
           lng: this.state.currentLocation.lng,
