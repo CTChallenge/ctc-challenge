@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import axios from 'axios'
 
 export class MapContainer extends Component {
 
@@ -17,6 +18,11 @@ export class MapContainer extends Component {
   }
 
   componentDidMount(){
+
+    axios.get('https://data.ct.gov/resource/deaths.json')
+      .then((res) => {
+        console.log(res.data);
+      });
 
     if (navigator && navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((pos) => {
