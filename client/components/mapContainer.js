@@ -20,27 +20,18 @@ export class MapContainer extends Component {
 
   componentDidMount(){
 
-    // axios.get('https://data.ct.gov/resource/wvv7-dnrt.json')
+    // axios.get('https://data.ct.gov/resource/htz8-fxbk.json')
     // .then((res) => {
-    //   res.data.forEach(element => {
-    //     console.log(element.location_1.latitude);
-        
-    //   });
+    //   console.log(res.data);
+      
     // })
     // let locations = [];
 
-    // let locations = res.data.map((element) => {
-    //   return {
-    //     position: {
-    //       lat: element.location_1.latitude,
-    //       lng: element.location_1.longitude
-    //     }
-    //   }
-    // });
+    
 
 
       
-    
+    //do this if naloxone tab is active
     this.getRequest('https://data.ct.gov/resource/wvv7-dnrt.json')
     
     
@@ -60,13 +51,34 @@ export class MapContainer extends Component {
         }
 
        async getRequest (url)  {
-        const response = await axios.get(url);
-        this.setState({markerPositions:response.data})
+        const res = await axios.get(url);
+        const locations = res.data.map((element) => {
+          return {
+            position: {
+              lat: element.location_1.latitude,
+              lng: element.location_1.longitude
+            }
+          }
+        });
+        this.setState({markerPositions:locations})
       }
 
 
-  render() {
-    console.log(this.state);
+      createMarker() {
+        let markers = this.state.markerPositions.map(ele => {
+          return <Marker position={ele.position}></Marker>
+        })
+        // console.log(markers);
+        return markers
+      }
+
+      
+      render() {
+        // console.log(this.state);
+        let locationsTomap = this.createMarker()
+        
+        // console.log(locationsTomap);
+        
     
     return (
       <Map google={this.props.google} zoom={this.state.zoom} 
@@ -79,11 +91,8 @@ export class MapContainer extends Component {
           lng: this.state.currentLocation.lng,
         }}>
 
-        {/* <Marker
-          
-          name="Current location"
-        /> */}
-
+        {locationsTomap}
+        
         <InfoWindow>
           <div>
             
