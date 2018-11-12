@@ -101,24 +101,23 @@ nav li {
 
 #main-content {
 	position: relative;
-	top: 12vh;
+	top: 135px;
 	/* background-color: #37474F; */
 	border: 0px;
 	padding-bottom: 5vh;
 }
 
-/* .container-fluid button {
+.container-fluid button {
 	color:DodgerBlue; 
 	font-size :2vw; 
 	font-weight :bold;
 	z-index: 0;
 	 border-radius: 5px; 
-} */
+}
 
 #button-container {
 	text-align:center; 
 	height:3vw;
-	margin-bottom: 10px;
 }
 
 /* #button-container button {
@@ -203,12 +202,12 @@ nav li {
 	font-size: 1.5vw;
 	text-align: center;
 	font-family: Verdana, Tahoma, sans-serif;
+	font-weight: 500;
 	position: relative;
 	color: #BBDEFB;
 	margin: auto;
-	padding-right: 20px;
-	padding-left: 20px;
-	top: 10vh;
+	padding: 10px 20px;
+	top: 130px;
 }
 
 #markerAddress {
@@ -236,7 +235,7 @@ nav li {
 
 .navbar-nav li a {
 	line-height: 60px;
-	font-size: 2vmin;
+	font-size: 1.7vmax;
    }
 
 

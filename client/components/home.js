@@ -35,7 +35,7 @@ export default class Home extends Component {
       <div>
         <Navbar inverse fixedTop fluid>
         <Navbar.Header>
-              <Navbar.Brand>App Name</Navbar.Brand>
+              <Navbar.Brand>CT's Good Samaritan</Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
           <Navbar.Collapse>
