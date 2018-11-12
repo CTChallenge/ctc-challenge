@@ -14,8 +14,10 @@ export class MapContainer extends Component {
         lng: -72.656391,
       },
       zoom: 9,
-      markerPositions: []
+      markerPositions: [],
+      activeMarker: {},
     };
+    this.onMarkerClick = this.onMarkerClick.bind(this)
   }
 
   componentDidMount(){
@@ -34,6 +36,7 @@ export class MapContainer extends Component {
     //do this if naloxone tab is active
     this.getRequest('https://data.ct.gov/resource/wvv7-dnrt.json')
     
+ 
     
     
     if (navigator && navigator.geolocation) {
@@ -48,34 +51,42 @@ export class MapContainer extends Component {
               })
             })
           }
-        }
+     }
 
-       async getRequest (url)  {
-        const res = await axios.get(url);
-        const locations = res.data.map((element) => {
-          return {
+     onMarkerClick(props, marker, e) {
+      this.setState({
+        activeMarker: marker,
+      });
+      // console.log(this.state);
+    }
+     
+     async getRequest (url)  {
+       const res = await axios.get(url);
+       const locations = res.data.map((element) => {
+         return {
             position: {
               lat: element.location_1.latitude,
               lng: element.location_1.longitude
-            }
+            },
+            title: element.pharmacy_name,
           }
         });
         this.setState({markerPositions:locations})
       }
 
-
+      
       createMarker() {
         let markers = this.state.markerPositions.map(ele => {
-          return <Marker position={ele.position}></Marker>
+          return <Marker position={ele.position} title={ele.title} onClick={this.onMarkerClick}></Marker>
         })
         // console.log(markers);
-        return markers
+        return markers;
       }
 
       
       render() {
-        // console.log(this.state);
         let locationsTomap = this.createMarker()
+        console.log(this.state);
         
         // console.log(locationsTomap);
         
