@@ -17,8 +17,7 @@ export class MapContainer extends Component {
   }
 
   componentDidMount(){
-    console.log(this.state);
-    
+
     if (navigator && navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((pos) => {
           const coords = pos.coords;
@@ -46,10 +45,10 @@ export class MapContainer extends Component {
           lng: this.state.currentLocation.lng,
         }}>
 
-        <Marker
+        {/* <Marker
           
           name="Current location"
-        />
+        /> */}
 
         <InfoWindow>
           <div>
