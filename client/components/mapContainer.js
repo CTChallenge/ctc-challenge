@@ -14,32 +14,60 @@ export class MapContainer extends Component {
         lng: -72.656391,
       },
       zoom: 9,
+      markerPositions: []
     };
   }
 
   componentDidMount(){
 
-    axios.get('https://data.ct.gov/resource/deaths.json')
-      .then((res) => {
-        console.log(res.data);
-      });
+    // axios.get('https://data.ct.gov/resource/wvv7-dnrt.json')
+    // .then((res) => {
+    //   res.data.forEach(element => {
+    //     console.log(element.location_1.latitude);
+        
+    //   });
+    // })
+    // let locations = [];
 
+    // let locations = res.data.map((element) => {
+    //   return {
+    //     position: {
+    //       lat: element.location_1.latitude,
+    //       lng: element.location_1.longitude
+    //     }
+    //   }
+    // });
+
+
+      
+    
+    this.getRequest('https://data.ct.gov/resource/wvv7-dnrt.json')
+    
+    
+    
     if (navigator && navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((pos) => {
-          const coords = pos.coords;
-          this.setState({
-              currentLocation: {
+        const coords = pos.coords;
+        this.setState({
+          currentLocation: {
                   lat: coords.latitude,
                   lng: coords.longitude
-              },
-              zoom: 14,
-          })
-      })
-  }
-  }
+                },
+                zoom: 14,
+              })
+            })
+          }
+        }
+
+       async getRequest (url)  {
+        const response = await axios.get(url);
+        this.setState({markerPositions:response.data})
+      }
 
 
   render() {
+    console.log(this.state);
+    
     return (
       <Map google={this.props.google} zoom={this.state.zoom} 
         initialCenter={{
