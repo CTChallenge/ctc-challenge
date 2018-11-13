@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
-// if (process.env.NODE_ENV !== 'production') const Dotenv = require('dotenv').config()
+
 
 
 module.exports = {
@@ -10,7 +10,7 @@ module.exports = {
     path: `${__dirname}/public`,
     filename: 'bundle.js',
   },
-  // mode: 'development',
+  mode: 'production',
   devtool: 'source-map',
   module: {
     rules: [
