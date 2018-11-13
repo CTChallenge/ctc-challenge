@@ -138,13 +138,9 @@ render() {
               <div className="col-sm-5 align-right">
                 {/* <!-- Name of the Marker, Address and Hours --> */}
                 <div className="align-middle">
-                  <p id="markerTitle">
-								 St. Vincent
-    </p>
-
-      <p id="markerAddress">
-    <b>Address:</b> <br /> 2800 Main St, Bridgeport, CT 06606
-  </p>
+                  <p id="markerTitle">   </p>
+				  <p id="markerAddress"><b>Address:</b> <br /> </p>
+				  <p id="markerPhone"><b>Phone:</b> <br /></p>
   </div>
 
     {/* <!-- The Marker Info --> */}
