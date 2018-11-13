@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path')
 
 if (process.env.NODE_ENV !== 'production') require('dotenv').config()
-require('dotenv').config();
+// require('dotenv').config();
 // Create the app
 const app = express();
 
