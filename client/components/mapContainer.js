@@ -23,7 +23,7 @@ export class MapContainer extends Component {
 
   componentDidMount(){
 
-    // axios.get('https://data.ct.gov/resource/htz8-fxbk.json')
+    // axios.get('https://data.ct.gov/resource/wvv7-dnrt.json')
     // .then((res) => {
     //   console.log(res.data);
       
@@ -55,7 +55,7 @@ export class MapContainer extends Component {
      }
 
      onMarkerClick(props, marker, e) {
-		 console.log(props);
+		//  console.log(props);
 		 document.getElementById("markerTitle").innerHTML = props.title;
 		 
 		 
@@ -74,6 +74,11 @@ export class MapContainer extends Component {
               lng: element.location_1.longitude
             },
             title: element.pharmacy_name,
+            address: element.address,
+            city: element.city,
+            zip: element.zip,
+            phone: element.phone,
+            
           }
         });
         this.setState({pharmacies:locations})
@@ -82,9 +87,18 @@ export class MapContainer extends Component {
       
       createPharmacyMarkers() {
         let pharmacyMarkers = this.state.pharmacies.map(ele => {
-          return <Marker position={ele.position} title={ele.title} onClick={this.onMarkerClick}></Marker>
+          return <Marker 
+          position={ele.position} 
+          title={ele.title} 
+          address={ele.address} 
+          city={ele.city}
+          zip={ele.zip}
+          phone={ele.phone}
+          onClick={this.onMarkerClick}
+          >
+          </Marker>
         })
-        // console.log(markers);
+        console.log(pharmacyMarkers);
         return pharmacyMarkers;
       }
 
@@ -104,7 +118,7 @@ export class MapContainer extends Component {
           treatmentCentersToDisplay = this.createTreatmentCenterMarkers
         }
         let treatmentCentersToDisplay;
-        console.log(this.state);
+        // console.log(this.state);
         
         // console.log(locationsTomap);
         
