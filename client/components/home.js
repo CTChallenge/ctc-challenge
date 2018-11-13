@@ -81,10 +81,11 @@ render() {
                     <li>Gasping for breath</li>
                   </ul>
                   <br />
-				  <span>Call <button type="button" class="btn btn-danger" href="tel:911" onClick={() => {this.handleClick}}> 9-1-1 </button> Immediately!!!</span><br />
-				 <p>Give them a clear address and location for speedy assistance. <br /></p>
-				 <p className="modal-paragraph">After calling the Police...<br /></p>
+				  <span>Call <button type="button" class="btn btn-danger" data-rel="external"  href="tel:911" onClick={() => {this.handleClick}}> 9-1-1 </button> Immediately!!!</span><br />
 				 
+				 <p>Give them a clear address and location for speedy assistance. <br /><br /></p>
+				 <p className="modal-paragraph">After calling the Police...<br /></p>
+				 <a href="tel:203-455-6056">CLICK TO CALL</a>
 				 <p>Wait with the person and perform basic CPR<br /></p>
 				 <ul>
 					 <li>Make sure nothing is in the person's mouth that is blocking breathing</li>
@@ -97,7 +98,7 @@ render() {
 				 
               </Modal.Body>
               <Modal.Footer>
-					 <button type="button" className="btn btn-default" data-rel="external" onClick={this.handleClose}>Close</button>
+					 <button type="button" className="btn btn-default" onClick={this.handleClose}>Close</button>
               </Modal.Footer>
           
           </div>
