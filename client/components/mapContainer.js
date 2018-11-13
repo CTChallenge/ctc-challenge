@@ -28,14 +28,19 @@ export class MapContainer extends Component {
     //   console.log(res.data);
       
     // })
-    // let locations = [];
 
     
-
-
+    // let locations = [];
+    
+    
+    
+    
       
     //do this if naloxone tab is active
     this.getPharmaciesRequest('https://data.ct.gov/resource/wvv7-dnrt.json')
+
+    //do this if treatment centers tab is active
+    this.getTreatmentCentersRequest("https://data.ct.gov/resource/htz8-fxbk.json")
     
     
     
@@ -52,10 +57,16 @@ export class MapContainer extends Component {
               })
             })
           }
-     }
+        }
+      async formatTreatmentCenter() {
+        res = await axios.get('https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=' + process.env.GOOGLEKEY)
+        .then((res) => {
+          return (res.data.results[0].geometry.location.lat);
+        })
+      }
 
-     onMarkerClick(props, marker, e) {
-      this.setState({
+        onMarkerClick(props, marker, e) {
+          this.setState({
         activeMarker: marker,
       });
       
@@ -75,6 +86,21 @@ export class MapContainer extends Component {
         this.setState({pharmacies:locations})
       }
 
+      async getTreatmentCentersRequest(url)  {
+        const res = await axios.get(url);
+        
+        const locations = res.data.map((element) => {
+          return {
+             position: {
+               lat: this.formatTreatmentCenter(),
+               lng: 50
+             },
+             
+           }
+         });
+         this.setState({treatmentCenters:locations})
+       }
+
       
       createPharmacyMarkers() {
         let pharmacyMarkers = this.state.pharmacies.map(ele => {
@@ -85,9 +111,11 @@ export class MapContainer extends Component {
       }
 
       createTreatmentCenterMarkers(){
-        let createTreatmentCenterMarkers = this.state.treatmentCenters.map(ele => {
-          return <Marker onClick={this.onMarkerClick}></Marker>
-        })
+        // console.log(this.state);
+        
+        // let createTreatmentCenterMarkers = this.state.treatmentCenters.map(ele => {
+        //   return <Marker onClick={this.onMarkerClick}></Marker>
+        // })
       }
 
       
@@ -97,7 +125,7 @@ export class MapContainer extends Component {
           pharmaciesToDisplay = this.createPharmacyMarkers()
         }
         if(true){
-          treatmentCentersToDisplay = this.createTreatmentCenterMarkers
+          treatmentCentersToDisplay = this.createTreatmentCenterMarkers()
         }
         let treatmentCentersToDisplay;
         console.log(this.state);
