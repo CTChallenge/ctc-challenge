@@ -60,7 +60,7 @@ export class MapContainer extends Component {
       // console.log(this.state);
     }
      
-     async getRequest (url)  {
+     async getRequest(url)  {
        const res = await axios.get(url);
        const locations = res.data.map((element) => {
          return {
