@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const Dotenv = require('dotenv-webpack');
+// const Dotenv = require('dotenv-webpack');
 
 
 
@@ -10,7 +10,6 @@ module.exports = {
     path: `${__dirname}/public`,
     filename: 'bundle.js',
   },
-  mode: 'production',
   devtool: 'source-map',
   module: {
     rules: [
@@ -29,8 +28,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new Dotenv()
-  ]
-  // target: 'node',
+    // new Dotenv()
+  ],
 };
 
