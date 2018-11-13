@@ -215,11 +215,16 @@ nav li {
 	font-size:1.6vw;
 }
 
+#markerAddress {
+	text-align:center;
+	font-size:1.6vw;
+}
+
 #markerParagraph {
 	font-size:1.55vw;
 	text-indent:40px; 
 	overflow-y : scroll; 
-	height: 75%; 
+	height: 50%; 
 	border-top: 1px solid black;
 }
 
