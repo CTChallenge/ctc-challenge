@@ -97,7 +97,7 @@ render() {
 				 
               </Modal.Body>
               <Modal.Footer>
-					 <button type="button" className="btn btn-default" onClick={this.handleClose}>Close</button>
+					 <button type="button" className="btn btn-default" data-rel="external" onClick={this.handleClose}>Close</button>
               </Modal.Footer>
           
           </div>
