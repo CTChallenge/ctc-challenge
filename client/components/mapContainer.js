@@ -14,7 +14,8 @@ export class MapContainer extends Component {
         lng: -72.656391,
       },
       zoom: 9,
-      markerPositions: [],
+      pharmacies: [],
+      treatmentCenters: [],
       activeMarker: {},
     };
     this.onMarkerClick = this.onMarkerClick.bind(this)
@@ -34,11 +35,11 @@ export class MapContainer extends Component {
 
       
     //do this if naloxone tab is active
-    this.getRequest('https://data.ct.gov/resource/wvv7-dnrt.json')
+    this.getPharmaciesRequest('https://data.ct.gov/resource/wvv7-dnrt.json')
     
     
     
-    
+    //if location services are enabled, zoom in to user's current location
     if (navigator && navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((pos) => {
         const coords = pos.coords;
@@ -60,7 +61,7 @@ export class MapContainer extends Component {
       
     }
      
-     async getRequest(url)  {
+     async getPharmaciesRequest(url)  {
        const res = await axios.get(url);
        const locations = res.data.map((element) => {
          return {
@@ -71,21 +72,34 @@ export class MapContainer extends Component {
             title: element.pharmacy_name,
           }
         });
-        this.setState({markerPositions:locations})
+        this.setState({pharmacies:locations})
       }
 
       
-      createMarker() {
-        let markers = this.state.markerPositions.map(ele => {
+      createPharmacyMarkers() {
+        let pharmacyMarkers = this.state.pharmacies.map(ele => {
           return <Marker position={ele.position} title={ele.title} onClick={this.onMarkerClick}></Marker>
         })
         // console.log(markers);
-        return markers;
+        return pharmacyMarkers;
+      }
+
+      createTreatmentCenterMarkers(){
+        let createTreatmentCenterMarkers = this.state.treatmentCenters.map(ele => {
+          return <Marker onClick={this.onMarkerClick}></Marker>
+        })
       }
 
       
       render() {
-        let locationsTomap = this.createMarker()
+        let pharmaciesToDisplay;
+        if(true){
+          pharmaciesToDisplay = this.createPharmacyMarkers()
+        }
+        if(true){
+          treatmentCentersToDisplay = this.createTreatmentCenterMarkers
+        }
+        let treatmentCentersToDisplay;
         console.log(this.state);
         
         // console.log(locationsTomap);
@@ -102,7 +116,8 @@ export class MapContainer extends Component {
           lng: this.state.currentLocation.lng,
         }}>
 
-        {locationsTomap}
+        {pharmaciesToDisplay}
+        {treatmentCentersToDisplay}
         
         <InfoWindow>
           <div>
@@ -117,4 +132,3 @@ export class MapContainer extends Component {
 export default GoogleApiWrapper({
 apiKey: (process.env.GOOGLEKEY),
 })(MapContainer);
-
