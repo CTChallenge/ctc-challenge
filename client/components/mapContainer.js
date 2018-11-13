@@ -36,7 +36,7 @@ export class MapContainer extends Component {
     //do this if naloxone tab is active
     this.getRequest('https://data.ct.gov/resource/wvv7-dnrt.json')
     
- 
+    
     
     
     if (navigator && navigator.geolocation) {
@@ -57,7 +57,7 @@ export class MapContainer extends Component {
       this.setState({
         activeMarker: marker,
       });
-      // console.log(this.state);
+      
     }
      
      async getRequest(url)  {
