@@ -20,6 +20,7 @@ handleClose() {
 
 handleShow() {
      this.setState({ show: true });
+	 console.log("handleShow??");
 }
 
 componentDidMount() {
@@ -81,14 +82,14 @@ render() {
                     <li>Gasping for breath</li>
                   </ul>
                   <br />
-				  <span>Call <button type="button" class="btn btn-danger" data-rel="external"  href="tel:911" onClick={() => {this.handleClick}}> 9-1-1 </button> Immediately!!!</span><br />
+				  /* <span>Call <button type="button" class="btn btn-danger" data-rel="external"  href="tel:911" onClick={() => {this.handleClick}}> 9-1-1 </button> Immediately!!!</span><br /> */
+				  <span>Call <a href="tel:203-455-6056"> 9-1-1 </a> Immediately!!!</span><br />
 				 
 				 <p>Give them a clear address and location for speedy assistance. <br /><br /></p>
 				 <p className="modal-paragraph">After calling the Police...<br /></p>
-				 <a href="tel:203-455-6056">CLICK TO CALL</a>
 				 <p>Wait with the person and perform basic CPR<br /></p>
 				 <ul>
-					 <li>Make sure nothing is in the person's mouth that is blocking breathing</li>
+					 <li>Make sure there is nothing in the person's mouth that could block their breathing</li>
 					 <li>Place one hand on the person's chin and tilt head back. Pinch his or her nose closed with the other hand</li>
 					 <li>Administer 2 slow breaths and look for the person's chest to rise</li>
 					 <li>Continue administering 1 breath every 5 seconds until the person starts breathing on his or her own</li>
@@ -128,7 +129,7 @@ render() {
     </p>
 
       <p id="markerAddress">
-    <b>Address:</b> 2800 Main St, Bridgeport, CT 06606
+    <b>Address:</b> <br /> 2800 Main St, Bridgeport, CT 06606
   </p>
   </div>
 
