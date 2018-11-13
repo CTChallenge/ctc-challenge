@@ -55,7 +55,7 @@ export class MapContainer extends Component {
      }
 
      onMarkerClick(props, marker, e) {
-		//  console.log(props);
+		 console.log(props);
 		 document.getElementById("markerTitle").innerHTML = props.title;
 		 
 		 
@@ -98,7 +98,7 @@ export class MapContainer extends Component {
           >
           </Marker>
         })
-        console.log(pharmacyMarkers);
+        //console.log(pharmacyMarkers);
         return pharmacyMarkers;
       }
 
