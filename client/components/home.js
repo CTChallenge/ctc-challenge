@@ -5,63 +5,61 @@ import MapContainer from './mapContainer'
 import {Button, Modal, Navbar, Nav, NavItem} from 'react-bootstrap';
 
 export default class Home extends Component {
-  constructor() {
-    super();
-    this.handleShow = this.handleShow.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-    this.state = {
-      show: false,
-    };
-  }
+	 constructor() {
+		 super();
+		 this.handleShow = this.handleShow.bind(this);
+		 this.handleClose = this.handleClose.bind(this);
+		 this.state = {
+			 show: false,
+		 };
+ }
 
-  handleClose() {
-    this.setState({ show: false });
-  }
+handleClose() {
+	 this.setState({ show: false });
+}
 
-  handleShow() {
-    this.setState({ show: true });
-  }
+handleShow() {
+     this.setState({ show: true });
+}
 
-  componentDidMount() {
+componentDidMount() {
     // axios.get('https://data.ct.gov/resource/deaths.json')
     //   .then((res) => {
     //     console.log(res.data);
     //   });
-  }
+}
 
 
-  render() {
-    return (
-      <div>
-        <Navbar inverse fixedTop fluid>
-        <Navbar.Header>
-              <Navbar.Brand>CT's Good Samaritan</Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-          <Navbar.Collapse>
-            <Nav>
-                <NavItem href="#">Home</NavItem>
-                <NavItem href="../overdoseGuide.html">What to do?</NavItem>
-                <NavItem href="../Data.html">Data</NavItem>
-              
-            </Nav>
-              <Nav pullRight>
-              <NavItem>
-                <button id="emergency-top" type="button" className="btn btn-danger navbar-btn" href="#"  onClick={this.handleShow}>
-							    Overdose/Emergency
-                </button>
-                </NavItem>
-                </Nav>
+render() {
+     return (
+		 <div>
+			 <Navbar inverse fixedTop fluid>
+				 <Navbar.Header>
+					 <Navbar.Brand>CT's Good Samaritan</Navbar.Brand>
+				 <Navbar.Toggle />
+				 </Navbar.Header>
+				 <Navbar.Collapse>
+				 <Nav>
+					 <NavItem href="#">Home</NavItem>
+					 <NavItem href="../overdoseGuide.html">What to do?</NavItem>
+					 <NavItem href="../Data.html">Data</NavItem>
+				 </Nav>
+				 <Nav pullRight>
+				 <NavItem>
+				 <button id="emergency-top" type="button" className="btn btn-danger navbar-btn" href="#"  onClick={this.handleShow}>
+									Overdose/Emergency
+				 </button>
+				 </NavItem>
+				 </Nav>
 
-          </Navbar.Collapse>
+				 </Navbar.Collapse>
 
-        </Navbar>
+				 </Navbar>
 
 
-          <div>
-          
-          <h4 id="description">If you or a loved one is struggling with opioid addiction, we want to help.<br />Check out the map below to find resources near you.</h4>
-          </div>
+			  <div>
+				 <h4 id="description">If you or a loved one is struggling with opioid addiction, we want to help.<br />Check out the map below to find resources near you.</h4>
+			  </div>
         
 
         {/* <!-- Modal --> */}
@@ -84,6 +82,7 @@ export default class Home extends Component {
                   </ul>
                   <br />
                   <span>Call 9-1-1 Immediately!!!</span><br />
+				  <span>Call <button type="button" class="btn btn-danger" href="tel:203-455-6056"> 9-1-1 </button> Immediately!!!</span><br />
 							 <p>Give them a clear address and location for speedy assistance.
                </p>
               </Modal.Body>
