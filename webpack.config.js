@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
-// const Dotenv = require('dotenv-webpack');
-if (process.env.NODE_ENV !== 'production') const Dotenv = require('dotenv').config()
+const Dotenv = require('dotenv-webpack');
+// if (process.env.NODE_ENV !== 'production') const Dotenv = require('dotenv').config()
 
 
 module.exports = {
