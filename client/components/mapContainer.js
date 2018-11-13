@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import axios from 'axios'
 
 export class MapContainer extends Component {
 
@@ -13,27 +14,101 @@ export class MapContainer extends Component {
         lng: -72.656391,
       },
       zoom: 9,
+      pharmacies: [],
+      treatmentCenters: [],
+      activeMarker: {},
     };
+    this.onMarkerClick = this.onMarkerClick.bind(this)
   }
 
   componentDidMount(){
 
-    if (navigator && navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((pos) => {
-          const coords = pos.coords;
-          this.setState({
-              currentLocation: {
+    // axios.get('https://data.ct.gov/resource/htz8-fxbk.json')
+    // .then((res) => {
+    //   console.log(res.data);
+      
+    // })
+    // let locations = [];
+
+    
+
+
+      
+    //do this if naloxone tab is active
+    this.getPharmaciesRequest('https://data.ct.gov/resource/wvv7-dnrt.json')
+    
+    
+    
+    //if location services are enabled, zoom in to user's current location
+     if (navigator && navigator.geolocation) {
+		 navigator.geolocation.getCurrentPosition((pos) => {
+         const coords = pos.coords;
+         this.setState({
+			 currentLocation: {
                   lat: coords.latitude,
                   lng: coords.longitude
-              },
-              zoom: 14,
-          })
-      })
-  }
-  }
+                 },
+                 zoom: 14,
+              })
+             })
+          }
+     }
 
+     onMarkerClick(props, marker, e) {
+		 console.log(props);
+		 document.getElementById("markerTitle").innerHTML = props.title;
+		 
+		 
+      this.setState({
+        activeMarker: marker,
+      });
+      
+     }
+     
+     async getPharmaciesRequest(url)  {
+       const res = await axios.get(url);
+       const locations = res.data.map((element) => {
+         return {
+            position: {
+              lat: element.location_1.latitude,
+              lng: element.location_1.longitude
+            },
+            title: element.pharmacy_name,
+          }
+        });
+        this.setState({pharmacies:locations})
+      }
 
-  render() {
+      
+      createPharmacyMarkers() {
+        let pharmacyMarkers = this.state.pharmacies.map(ele => {
+          return <Marker position={ele.position} title={ele.title} onClick={this.onMarkerClick}></Marker>
+        })
+        // console.log(markers);
+        return pharmacyMarkers;
+      }
+
+      createTreatmentCenterMarkers(){
+        let createTreatmentCenterMarkers = this.state.treatmentCenters.map(ele => {
+          return <Marker onClick={this.onMarkerClick}></Marker>
+        })
+      }
+
+      
+      render() {
+        let pharmaciesToDisplay;
+        if(true){
+          pharmaciesToDisplay = this.createPharmacyMarkers()
+        }
+        if(true){
+          treatmentCentersToDisplay = this.createTreatmentCenterMarkers
+        }
+        let treatmentCentersToDisplay;
+        console.log(this.state);
+        
+        // console.log(locationsTomap);
+        
+    
     return (
       <Map google={this.props.google} zoom={this.state.zoom} 
         initialCenter={{
@@ -45,11 +120,9 @@ export class MapContainer extends Component {
           lng: this.state.currentLocation.lng,
         }}>
 
-        {/* <Marker
-          
-          name="Current location"
-        /> */}
-
+        {pharmaciesToDisplay}
+        {treatmentCentersToDisplay}
+        
         <InfoWindow>
           <div>
             
@@ -63,4 +136,3 @@ export class MapContainer extends Component {
 export default GoogleApiWrapper({
 apiKey: (process.env.GOOGLEKEY),
 })(MapContainer);
-
