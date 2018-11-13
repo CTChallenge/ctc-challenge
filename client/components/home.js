@@ -5,63 +5,62 @@ import MapContainer from './mapContainer'
 import {Button, Modal, Navbar, Nav, NavItem} from 'react-bootstrap';
 
 export default class Home extends Component {
-  constructor() {
-    super();
-    this.handleShow = this.handleShow.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-    this.state = {
-      show: false,
-    };
-  }
+	 constructor() {
+		 super();
+		 this.handleShow = this.handleShow.bind(this);
+		 this.handleClose = this.handleClose.bind(this);
+		 this.state = {
+			 show: false,
+		 };
+ }
 
-  handleClose() {
-    this.setState({ show: false });
-  }
+handleClose() {
+	 this.setState({ show: false });
+}
 
-  handleShow() {
-    this.setState({ show: true });
-  }
+handleShow() {
+     this.setState({ show: true });
+	 console.log("handleShow??");
+}
 
-  componentDidMount() {
+componentDidMount() {
     // axios.get('https://data.ct.gov/resource/deaths.json')
     //   .then((res) => {
     //     console.log(res.data);
     //   });
-  }
+}
 
 
-  render() {
-    return (
-      <div>
-        <Navbar inverse fixedTop fluid>
-        <Navbar.Header>
-              <Navbar.Brand>CT's Good Samaritan</Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-          <Navbar.Collapse>
-            <Nav>
-                <NavItem href="#">Home</NavItem>
-                <NavItem href="../overdoseGuide.html">What to do?</NavItem>
-                <NavItem href="../Data.html">Data</NavItem>
-              
-            </Nav>
-              <Nav pullRight>
-              <NavItem>
-                <button id="emergency-top" type="button" className="btn btn-danger navbar-btn" href="#"  onClick={this.handleShow}>
-							    Overdose/Emergency
-                </button>
-                </NavItem>
-                </Nav>
+render() {
+     return (
+		 <div>
+			 <Navbar inverse fixedTop fluid>
+				 <Navbar.Header>
+					 <Navbar.Brand>CT's Good Samaritan</Navbar.Brand>
+				 <Navbar.Toggle />
+				 </Navbar.Header>
+				 <Navbar.Collapse>
+				 <Nav>
+					 <NavItem href="#">Home</NavItem>
+					 <NavItem href="../overdoseGuide.html">What to do?</NavItem>
+					 <NavItem href="../Data.html">Data</NavItem>
+				 </Nav>
+				 <Nav pullRight>
+				 <NavItem>
+				 <button id="emergency-top" type="button" className="btn btn-danger navbar-btn" href="#"  onClick={this.handleShow}>
+									Overdose/Emergency
+				 </button>
+				 </NavItem>
+				 </Nav>
 
-          </Navbar.Collapse>
+				 </Navbar.Collapse>
 
-        </Navbar>
+				 </Navbar>
 
 
-          <div>
-          
-          <h4 id="description">If you or a loved one is struggling with opioid addiction, we want to help.<br />Check out the map below to find resources near you.</h4>
-          </div>
+			  <div>
+				 <h4 id="description">If you or a loved one is struggling with opioid addiction, we want to help.<br />Check out the map below to find resources near you.</h4>
+			  </div>
         
 
         {/* <!-- Modal --> */}
@@ -73,7 +72,7 @@ export default class Home extends Component {
                 <Modal.Title>Emergency Overdose Crisis</Modal.Title>
               </Modal.Header>
               <Modal.Body>
-                <p>Assuming that you already know that the person has overdosed and they are showing the following signs:</p>
+                 <p>Assuming that you already know that the person has overdosed and they are showing the following signs:</p>
                   <ul>
                     <li>Blue or pale skin color</li>
                     <li>Small pupils</li>
@@ -83,12 +82,38 @@ export default class Home extends Component {
                     <li>Gasping for breath</li>
                   </ul>
                   <br />
-                  <span>Call 9-1-1 Immediately!!!</span><br />
-							 <p>Give them a clear address and location for speedy assistance.
-               </p>
+				 <span>Call <a href="tel:911"> 9-1-1 </a> Immediately!!!</span><br />
+				 
+				 <p>Give them a clear address and location for speedy assistance. <br /><br /></p>
+				 <p className="modal-paragraph">After calling the Police...<br /></p>
+				 <p>Wait with the person and perform basic CPR<br /></p>
+				 <ul>
+					 <li>Make sure there is nothing in the person's mouth that could block their breathing</li>
+					 <li>Place one hand on the person's chin and tilt head back. Pinch his or her nose closed with the other hand</li>
+					 <li>Administer 2 slow breaths and look for the person's chest to rise</li>
+					 <li>Continue administering 1 breath every 5 seconds until the person starts breathing on his or her own</li>
+					 <li>If the person is still unresponsive after repeating for 30 seconds, you can give them Naloxone</li>
+				 </ul>
+				 
+				 <p>Naloxone can be administered two ways:</p>
+				 <ol type="1">
+					 <li>Into the Nose with an Intranasal Spray
+						 <ul>
+							 <li>Tilt the person's head back and provide support under the next with one hand.</li>
+							 <li>Insert the nozzle of the spray into the person's nose.</li>
+							 <li>Press the plunger firmly to administer a dose of NARCAN Nasal Spray</li>
+						 </ul>
+					 </li>
+					 <li>Into the muscle through Intramuscular Injection
+						 <ul>
+							 <li>Inject the Naloxone into the person's upper arm muscle (the deltoid). It is safe to inject through clothing.</li>
+						 </ul>
+					 </li>
+				 </ol>
+				 
               </Modal.Body>
               <Modal.Footer>
-                <button type="button" className="btn btn-default" onClick={this.handleClose}>Close</button>
+					 <button type="button" className="btn btn-default" onClick={this.handleClose}>Close</button>
               </Modal.Footer>
           
           </div>
@@ -118,7 +143,7 @@ export default class Home extends Component {
     </p>
 
       <p id="markerAddress">
-    <b>Address:</b> 2800 Main St, Bridgeport, CT 06606
+    <b>Address:</b> <br /> 2800 Main St, Bridgeport, CT 06606
   </p>
   </div>
 

@@ -2,6 +2,10 @@
 const express = require('express');
 const path = require('path')
 require('dotenv').config();
+
+
+
+// if (process.env.NODE_ENV !== 'production') require('dotenv').config()
 // Create the app
 const app = express();
 
@@ -14,6 +18,7 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`listening on port ${  PORT}`);
+  
 
 });
 

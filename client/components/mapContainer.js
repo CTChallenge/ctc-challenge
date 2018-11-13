@@ -23,7 +23,7 @@ export class MapContainer extends Component {
 
   componentDidMount(){
 
-    // axios.get('https://data.ct.gov/resource/htz8-fxbk.json')
+    // axios.get('https://data.ct.gov/resource/wvv7-dnrt.json')
     // .then((res) => {
     //   console.log(res.data);
       
@@ -52,10 +52,10 @@ export class MapContainer extends Component {
           currentLocation: {
                   lat: coords.latitude,
                   lng: coords.longitude
-                },
-                zoom: 14,
+                 },
+                 zoom: 14,
               })
-            })
+             })
           }
         }
       async formatTreatmentCenter() {
@@ -65,12 +65,16 @@ export class MapContainer extends Component {
         })
       }
 
-        onMarkerClick(props, marker, e) {
-          this.setState({
+     onMarkerClick(props, marker, e) {
+		//  console.log(props);
+		 document.getElementById("markerTitle").innerHTML = props.title;
+		 
+		 
+      this.setState({
         activeMarker: marker,
       });
       
-    }
+     }
      
      async getPharmaciesRequest(url)  {
        const res = await axios.get(url);
@@ -81,6 +85,11 @@ export class MapContainer extends Component {
               lng: element.location_1.longitude
             },
             title: element.pharmacy_name,
+            address: element.address,
+            city: element.city,
+            zip: element.zip,
+            phone: element.phone,
+            
           }
         });
         this.setState({pharmacies:locations})
@@ -104,18 +113,25 @@ export class MapContainer extends Component {
       
       createPharmacyMarkers() {
         let pharmacyMarkers = this.state.pharmacies.map(ele => {
-          return <Marker position={ele.position} title={ele.title} onClick={this.onMarkerClick}></Marker>
+          return <Marker 
+          position={ele.position} 
+          title={ele.title} 
+          address={ele.address} 
+          city={ele.city}
+          zip={ele.zip}
+          phone={ele.phone}
+          onClick={this.onMarkerClick}
+          >
+          </Marker>
         })
-        // console.log(markers);
+        console.log(pharmacyMarkers);
         return pharmacyMarkers;
       }
 
       createTreatmentCenterMarkers(){
-        // console.log(this.state);
-        
-        // let createTreatmentCenterMarkers = this.state.treatmentCenters.map(ele => {
-        //   return <Marker onClick={this.onMarkerClick}></Marker>
-        // })
+        let createTreatmentCenterMarkers = this.state.treatmentCenters.map(ele => {
+          return <Marker onClick={this.onMarkerClick}></Marker>
+        })
       }
 
       
