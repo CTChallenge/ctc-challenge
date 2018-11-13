@@ -84,6 +84,7 @@ render() {
                   <span>Call 9-1-1 Immediately!!!</span><br />
 				  <span>Call <button type="button" class="btn btn-danger" href="tel:203-455-6056"> 9-1-1 </button> Immediately!!!</span><br />
 							 <p>Give them a clear address and location for speedy assistance.
+							 <a href="tel:203-455-6056" onClick={() => {this.handleClick}}>click me</a>
                </p>
               </Modal.Body>
               <Modal.Footer>
