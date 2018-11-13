@@ -20,6 +20,10 @@ handleClose() {
 
 handleShow() {
      this.setState({ show: true });
+}
+
+loadMarker() {
+     this.setState({ show: true });
 	 console.log("handleShow??");
 }
 
