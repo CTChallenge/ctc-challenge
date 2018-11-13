@@ -20,10 +20,6 @@ handleClose() {
 
 handleShow() {
      this.setState({ show: true });
-}
-
-loadMarker() {
-     this.setState({ show: true });
 	 console.log("handleShow??");
 }
 
@@ -76,7 +72,7 @@ render() {
                 <Modal.Title>Emergency Overdose Crisis</Modal.Title>
               </Modal.Header>
               <Modal.Body>
-                <p>Assuming that you already know that the person has overdosed and they are showing the following signs:</p>
+                 <p>Assuming that you already know that the person has overdosed and they are showing the following signs:</p>
                   <ul>
                     <li>Blue or pale skin color</li>
                     <li>Small pupils</li>
@@ -86,8 +82,7 @@ render() {
                     <li>Gasping for breath</li>
                   </ul>
                   <br />
-				  /* <span>Call <button type="button" class="btn btn-danger" data-rel="external"  href="tel:911" onClick={() => {this.handleClick}}> 9-1-1 </button> Immediately!!!</span><br /> */
-				  <span>Call <a href="tel:203-455-6056"> 9-1-1 </a> Immediately!!!</span><br />
+				 <span>Call <a href="tel:911"> 9-1-1 </a> Immediately!!!</span><br />
 				 
 				 <p>Give them a clear address and location for speedy assistance. <br /><br /></p>
 				 <p className="modal-paragraph">After calling the Police...<br /></p>
@@ -100,6 +95,21 @@ render() {
 					 <li>If the person is still unresponsive after repeating for 30 seconds, you can give them Naloxone</li>
 				 </ul>
 				 
+				 <p>Naloxone can be administered two ways:</p>
+				 <ol type="1">
+					 <li>Into the Nose with an Intranasal Spray
+						 <ul>
+							 <li>Tilt the person's head back and provide support under the next with one hand.</li>
+							 <li>Insert the nozzle of the spray into the person's nose.</li>
+							 <li>Press the plunger firmly to administer a dose of NARCAN Nasal Spray</li>
+						 </ul>
+					 </li>
+					 <li>Into the muscle through Intramuscular Injection
+						 <ul>
+							 <li>Inject the Naloxone into the person's upper arm muscle (the deltoid). It is safe to inject through clothing.</li>
+						 </ul>
+					 </li>
+				 </ol>
 				 
               </Modal.Body>
               <Modal.Footer>
