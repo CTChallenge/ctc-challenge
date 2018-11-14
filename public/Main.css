@@ -119,15 +119,16 @@ nav li {
 } */
 
 #googleMap {
-	position: relative;
-	width:60vw; 
-	height:70vh; 
-	overflow: hidden; 
-	margin-left:auto; 
-	margin-right:auto;
-	/* padding-right: 20px;  */
-	border: 3px solid #00E5FF;
-	border-radius: 20px;
+	 position: relative;
+	 width:60vw; 
+	 height:70vh; 
+	 overflow: hidden; 
+	 margin-left:auto; 
+	 margin-right:auto;
+	 /* padding-right: 20px;  */
+	 border: 3px solid #00E5FF;
+	 border-radius: 20px;
+	 padding-left:10%
 }
 
 .col-sm-5 {
@@ -219,18 +220,18 @@ nav li {
 }
 
 /* Breakpoints */
-.col-1 {width: 8%;}
-.col-2 {width: 12%;}
-.col-3 {width: 16%;}
-.col-4 {width: 20%;}
-.col-5 {width: 24%;}
-.col-6 {width: 28%;}
-.col-7 {width: 32%;}
-.col-8 {width: 36%;}
-.col-9 {width: 40%;}
-.col-10 {width: 44%;}
-.col-11 {width: 48%;}
-.col-12 {width: 52%;}
+.col-1 {width: 25%;}
+.col-2 {width: 30%;}
+.col-3 {width: 35%;}
+.col-4 {width: 40%;}
+.col-5 {width: 45%;}
+.col-6 {width: 50%;}
+.col-7 {width: 55%;}
+.col-8 {width: 60%;}
+.col-9 {width: 65%;}
+.col-10 {width: 70%;}
+.col-11 {width: 75%;}
+.col-12 {width: 80%;}
 
 
 .navbar {
