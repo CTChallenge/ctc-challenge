@@ -1,5 +1,4 @@
 
-
 html, body {
     margin: 0;
 	height: 100%;
@@ -177,7 +176,7 @@ nav li {
 	font-size:16px;
 }
 
-.title {
+#title {
 	 font-size:4vw; 
 	 text-align:center;
 	 font-family: Verdana, Tahoma, sans-serif;
@@ -227,6 +226,7 @@ nav li {
 	}
 
 	 #markerTitle {
+		 padding-top : 5px;
 		 font-size:3.5vw; 
 		 /* overflow: hidden;  */
 		 text-align:center; 
@@ -271,6 +271,7 @@ nav li {
 	 }
 	
 	 #markerTitle {
+		 padding-top : 5px;
 		 font-size:2.5vw; 
 		 /* overflow: hidden;  */
 		 text-align:center; 
@@ -295,7 +296,7 @@ nav li {
 	 /* height: 8vw; */
 	 height: 1.5vmax;
 	 border: 0px;
-	 top: 6.5vw;
+	 top: 4vw;
 	 align-items: center;
 	 align-content: center;
 }
