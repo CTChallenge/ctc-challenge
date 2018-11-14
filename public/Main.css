@@ -164,12 +164,12 @@ nav li {
 }
 
 #emergency-top {
-	 font-size: 2.2vmax;
+	 font-size: 2vmax;
 	 font-weight: 900;
 	 margin: auto;
 	 margin-right:20px; 
 	 color:white;
-	 height: 1.5vmax;
+	 height: 3vmax;
 	 top: 4.5vw;
 }
 
@@ -275,7 +275,7 @@ nav li {
 		 float: right;
 		 border-radius: 20px;
 		 width: 30vw;
-		 height: 50vw;
+		 height: 40vw;
 		 background-color: white;
 		 /* vertical-align: middle; */
 		 /* margin-left: 3%; */
