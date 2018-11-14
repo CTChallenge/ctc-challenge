@@ -95,7 +95,7 @@ nav li {
 #main-content {
 	 position: relative;
 	 /* top: 135px; */
-	 top: 10%;
+	 top: 12vw;
 	 /* background-color: #37474F; */
 	 border: 0px;
 	 padding-bottom: 5vh;
@@ -201,27 +201,8 @@ nav li {
 	 top: 130px;
 }
 
-
-#markerTitle {
-	 font-size:2.5vw; 
-	 /* overflow: hidden;  */
-	 text-align:center; 
-	 text-decoration: underline;
-}
-
-#markerAddress {
-	 text-align:center;
-	 font-size:1.6vw;
-}
-
-#markerPhone {
-	 text-align:center;
-	 font-size:1.6vw;
-}
-
-
  /* For mobile phones: */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 800px) {
 	 
 	 
 	 #mapsContainer{
@@ -268,29 +249,27 @@ nav li {
 }
 
 /* For Desktops */
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 800px) {
 
 	 #mapsContainer{
 		 float: left;
-		 height:60vw;
-		 width:60vw;
+		 height:50vw;
+		 width:50vw;
 	 }
 	
 	
-	#markerInfo{
+	 #markerInfo{
 		 border: 3px solid #00E676;
 		 /* margin-top: 3.67%; */
-		 margin-left: auto;
-		 margin-right: auto;
 		 /* position: relative; */
 		 float: right;
 		 border-radius: 20px;
 		 width: 30vw;
-		 height: 45vw;
+		 height: 50vw;
 		 background-color: white;
 		 /* vertical-align: middle; */
 		 /* margin-left: 3%; */
-	}
+	 }
 	
 	 #markerTitle {
 		 font-size:2.5vw; 
