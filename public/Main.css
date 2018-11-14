@@ -133,6 +133,8 @@ nav li {
 
 #mapsContainer{
 	 float: left;
+	 height:60vw;
+	 width:60vw;
 }
 
 
