@@ -133,8 +133,8 @@ nav li {
 
 #mapsContainer{
 	 float: left;
-	 height:60vw;
-	 width:60vw;
+	 height:40vw;
+	 width:40vw;
 }
 
 
@@ -238,8 +238,9 @@ nav li {
 
 
  /* For mobile phones: */
-[class*="col-"] {
-	 width: 45%;
+@media only screen and (max-width: 768px) {
+	 .col-4 {width: 30%;}
+	 .col-8 {width: 50%;}
 }
 
 /* For Pcs */
