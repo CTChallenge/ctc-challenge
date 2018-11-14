@@ -93,7 +93,7 @@ nav li {
 #main-content {
 	 position: relative;
 	 /* top: 135px; */
-	 top: 12vw;
+	 top: 15vw;
 	 /* background-color: #37474F; */
 	 border: 0px;
 	 padding-bottom: 5vh;
@@ -159,11 +159,13 @@ nav li {
 }
 
 #emergency-top {
-	font-size:2vmax; 
-	font-weight: 900;
-	margin: auto;
-	margin-right:20px; 
-	color:white;
+	 font-size: 2.2vmax;
+	 font-weight: 900;
+	 margin: auto;
+	 margin-right:20px; 
+	 color:white;
+	 height: 60px;
+	 top: 6.5vw;
 }
 
 .modal p {
@@ -181,12 +183,13 @@ nav li {
 	 font-family: Verdana, Tahoma, sans-serif;
 	 position: fixed;
 	 top:0;
-	 margin:auto;
+	 margin-left:auto;
+	 margin-right:auto;
 	 color: #95a5a6;
 }
 
 #description {
-	 font-size: 1.5vw;
+	 font-size: 1.75vw;
 	 text-align: center;
 	 font-family: Verdana, Tahoma, sans-serif;
 	 font-weight: 500;
@@ -194,7 +197,7 @@ nav li {
 	 color: #BBDEFB;
 	 margin: auto;
 	 padding: 10px 20px;
-	 top: 8.5vw;
+	 top: 11.5vw;
 }
 
  /* For mobile phones: */
@@ -298,9 +301,8 @@ nav li {
 }
 
 .navbar-nav li a {
-	/*  line-height: 60px; */
+	 line-height: 60px;
 	 font-size: 1.7vmax;
-	 background-color: #37474F; 
  }
 
 /*breakpoint needed when emergency button and menu buttons touch this text, around*/
