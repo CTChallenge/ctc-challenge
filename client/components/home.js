@@ -121,27 +121,27 @@ render() {
           <br />
           {/* <!-- Source : https://www.w3schools.com/html/html_responsive.asp --> */}
           <div id="main-content" className="container-fluid">
-            <div className="row">
+			<div className="row">
               {/* <!-- Google Maps Section--> */}
               <div className="col-sm-8">
-                {/* <!-- Buttons --> */}
-                <div id="button-container">
-                  <button>Naloxone</button>
-                  <button>Treatment Centers</button>
-                </div>
-                <div id="googleMap">
-                <MapContainer />
-                </div>
+					{/* <!-- Buttons --> */}
+					<div id="button-container">
+						  <button>Naloxone</button>
+						  <button>Treatment Centers</button>
+					</div>
+					<div id="googleMap">
+						 <MapContainer />
+					</div>
                 {/* <!-- Google Map Display --> */}
               </div>
 
-              <div className="col-sm-5 align-right">
+              <div id="markerInfo" className="col-sm-5 align-right">
                 {/* <!-- Name of the Marker, Address and Hours --> */}
                 <div className="align-middle">
-                  <p id="markerTitle">   </p>
-				  <p id="markerAddress"><b>Address:</b> <br /> </p>
-				  <p id="markerPhone"><b>Phone:</b> <br /></p>
-  </div>
+					  <p id="markerTitle"> </p>
+					  <p id="markerAddress"> </p>
+					  <p id="markerPhone"> </p>
+				</div>
 
     {/* <!-- The Marker Info --> */}
     <p id="markerParagraph">

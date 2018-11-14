@@ -57,9 +57,10 @@ export class MapContainer extends Component {
      onMarkerClick(props, marker, e) {
 		 console.log(props);
 		 document.getElementById("markerTitle").innerHTML = props.title;
-		 document.getElementById("markerAddress").innerHTML = <b>Address:</b> <br /> props.address <br /> props.city + ", CT "+ props.zip.substring(0,5);
-		 document.getElementById("markerPhone").innerHTML = <b>Phone:</b> <a href="tel:"+props.phone>  props.phone </a> ;
-		 
+		 var htmlText = "<b>Address:</b> <br/> "+props.address +",<br/>"+ props.city + ", CT "+ props.zip.substring(0,5);
+		 document.getElementById("markerAddress").innerHTML = htmlText;
+		 htmlText = "b>Phone:</b> <a href=tel:"+props.phone+">"+props.phone+"</a>" ;
+		 document.getElementById("markerPhone").innerHTML =  htmlText;
 		 
       this.setState({
         activeMarker: marker,
