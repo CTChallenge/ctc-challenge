@@ -49,6 +49,8 @@ footer {
 	 text-align: center;	
 	 position: relative;
 	 display:block;
+	 float:bottom;
+	 bottom:0px;
 }
 
 table, th, td {
@@ -183,6 +185,9 @@ nav li {
 	 font-family: Verdana, Tahoma, sans-serif;
 	 text-align: center;	
 	 background-color: #242424;
+	 position: relative;
+	 float:top;
+	 top:0px;
 }
 
 #description {
