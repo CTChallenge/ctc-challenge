@@ -13,7 +13,8 @@ module.exports = {
     filename: 'bundle.js',
   },
   devtool: 'source-map',
-  mode: 'development',
+  mode: 'production',
+  REACT_APP_GOOGLKEY: JSON.stringify(process.env.REACT_APP_GOOGLKEY),
   module: {
     rules: [
       {
