@@ -34,7 +34,7 @@ export default class Home extends Component {
 		 return (
 			 <div>
 				 <header>
-					 <h1 id=title>Connecticut's Good Samaritan</h1>
+					 <h1 id="title">Connecticut's Good Samaritan</h1>
 				 </header>
 			 
 				 <Navbar inverse fixedTop fluid>
