@@ -34,7 +34,7 @@ export default class Home extends Component {
 			 <div>
 				 <Navbar inverse fixedTop fluid>
 					 <div class="navbar-header">
-						<NavItem>
+						<NavItem data-toggle="collapse">
 							 <button id="emergency-top" type="button" className="btn btn-danger navbar-btn" href="#"  onClick={this.handleShow}>Overdose/Emergency</button>
 						 </NavItem>
 						 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -138,13 +138,10 @@ export default class Home extends Component {
 						 {/* <!--  <div id="markerInfo" className="col-sm-5 align-right"> --> */}
 						 <div id="markerInfo" className="col-4">
 							 {/* <!-- Name of the Marker, Address and Hours --> */}
-							 <p id="markerTitle"> Provider </p>
+							 <p id="markerTitle"> Marker's Info:</p>
 							 <p id="markerAddress"> </p>
 							 <p id="markerPhone"> </p>
 						 </div>
-						 <button id="emergency" type="button" className="btn btn-danger btn-lg btn-block" href="#" data-toggle="modal" data-target="#myModal">
-							 Emergency Overdose Crisis
-						 </button>
 					 </div>
 				 </div>
 			 </div>
