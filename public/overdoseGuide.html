@@ -35,11 +35,90 @@
 						 <li style="font-size:2.5vh;"><a href="../index.html">Home</a></li>
 						 <li class="active" style="font-size:2.5vh;"><a href="">What to do?</a></li>
 					 </ul>
-					 <ul class = "nav navbar-nav navbar-right"> </ul>
+					 <ul class="EmergencyButton nav navbar-nav  navbar-right">
+						 <button type="button" class="btn btn-danger navbar-btn" href="#" style="font-size:2vh; margin-right:20px; color:black" data-toggle="modal" data-target="#myModal">
+							 Emergency Overdose Crisis
+						 </button>
+					 </ul>
 				 </div>
 			 </div>
 		 </nav>
 
+		 <!-- Modal -->
+		 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		     <div class="modal-dialog" role="document">
+				 <div class="modal-content">
+					 <div class="modal-header">
+						 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						 <h4 class="modal-title" id="myModalLabel" style= "font-weight:bold;">Emergency Overdose Crisis</h4>
+					 </div>
+					 <div class="modal-body">
+						 <!-- Assuming -->
+						 <p style="font-size:16px">Assuming that you already know that the person has overdosed and they are showing the following signs:<br>
+							 <ul>
+								 <li>Blue or pale skin color</li>
+								 <li>Small pupils</li>
+								 <li>Low blood pressure</li>
+								 <li>Slow heartbeat</li>
+								 <li>Slow or shallow breathing</li>
+								 <li>Gasping for breath</li>
+							 </ul>
+						 </p>
+						 <br>
+						 <!-- Call 9-1-1 -->
+						 <p style="font-size:16px">
+							 <!-- Trigger Call Source: https://stackoverflow.com/questions/1608548/how-to-trigger-a-phone-call-when-clicking-a-link-in-a-web-page-on-mobile-phone -->
+							 <!-- <span style= "font-weight:bold">Call <a href="tel:203-455-6056" style= "color:red;">9-1-1</a> Immediately!!!</span><br> -->
+							 <span style= "font-weight:bold">Call <button type="button" class="btn btn-danger" href="tel:203-455-6056" style="color:black"> 9-1-1 </button> Immediately!!!</span><br>
+							 Give them a clear address and location for speedy assistance.
+						 </p>
+						 <br>
+						 <!-- Basic CPR-->
+						 <p class="modal-paragraph">After calling the Police...<br /></p>
+							 <p>Wait with the person and perform basic CPR<br /></p>
+							 <ul>
+								 <li>Make sure there is nothing in the person's mouth that could block their breathing</li>
+								 <li>Place one hand on the person's chin and tilt head back. Pinch his or her nose closed with the other hand</li>
+								 <li>Administer 2 slow breaths and look for the person's chest to rise</li>
+								 <li>Continue administering 1 breath every 5 seconds until the person starts breathing on his or her own</li>
+								 <li>If the person is still unresponsive after repeating for 30 seconds, you can give them Naloxone</li>
+							 </ul>
+						 
+							 <p>Naloxone can be administered two ways:</p>
+							 <ol type="1">
+								 <li>Into the Nose with an Intranasal Spray
+									 <ul>
+										 <li>Tilt the person's head back and provide support under the neck with one hand.</li>
+										 <li>Insert the nozzle of the spray into the person's nose.</li>
+										 <li>Press the plunger firmly to administer a dose of NARCAN Nasal Spray</li>
+									 </ul>
+								 </li>
+								 <li>Into the muscle through Intramuscular Injection
+									 <ul>
+										 <li>Inject the Naloxone into the person's upper arm muscle (the deltoid). It is safe to inject through clothing.</li>
+									 </ul>
+								 </li>
+							 </ol>
+						 
+						 <!-- 
+							 Administering Naloxone
+-You can administer naloxone through the nose.
+-Hold the NARCAN Nasal Spray with your thumb on the bottom of the plunger and your first and middle fingers on either side of the nozzle.
+
+
+						 -->
+						 
+						 
+						 
+					 </div>
+					 <div class="modal-footer">
+						 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					 </div>
+				 </div>
+		     </div>
+		 </div>
+		 
+		 
 		 <article>
 			 <!-- Section Title -->
 			 <p id="descriptionTitle"  style="font-size:4.75vw; text-align:center; text-decoration: underline;">
