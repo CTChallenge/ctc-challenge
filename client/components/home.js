@@ -34,8 +34,8 @@ export default class Home extends Component {
 			 <div>
 				 <Navbar inverse fixedTop fluid>
 					 <div class="navbar-header">
-						<NavItem class="navbar-toggle" data-toggle="collapse">
-							 <button id="emergency-top" type="button" className="btn btn-danger navbar-btn" href="#"  onClick={this.handleShow}>Overdose/Emergency</button>
+						 <NavItem class="navbar-toggle">
+							 <button id="emergency-top-collapsed" type="button" className="btn btn-danger navbar-btn" href="#"  onClick={this.handleShow}>Overdose/Emergency</button>
 						 </NavItem>
 						 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 							 <span class="icon-bar"></span>
@@ -43,12 +43,12 @@ export default class Home extends Component {
 							 <span class="icon-bar"></span>  
 						 </button>
 					 </div>
-					 <Navbar.Collapse >
-						 <Nav id="myNavbar">
-							 <NavItem href="#">Home</NavItem>
-							 <NavItem href="../overdoseGuide.html">What to do?</NavItem>
-							 <NavItem href="../Data.html">Data</NavItem>
-						 </Nav>
+					 <Navbar.Collapse  id="myNavbar">
+						 <ul class="nav navbar-nav">
+							 <li class="active" style="font-size:2.5vw;"><a href="">Home</a></li>
+							 <li style="font-size:2.5vw;"><a href="../overdoseGuide.html">What to do?</a></li>
+							 <li style="font-size:2.5vw;"><a href="../Data.html">Data</a></li>
+						 </ul>
 						 <Nav pullRight>
 							 <NavItem>
 								 <button id="emergency-top" type="button" className="btn btn-danger navbar-btn" href="#"  onClick={this.handleShow}>Overdose/Emergency</button>
@@ -139,7 +139,7 @@ export default class Home extends Component {
 						 <div id="markerInfo" className="col-4">
 							 {/* <!-- Name of the Marker, Address and Hours --> */}
 							 <p id="markerTitle"> Marker's Info:</p>
-							 <p id="markerAddress"> Information will appear for the r</p>
+							 <p id="markerAddress"> When a marker is selected, the information of that marker will be posted here. </p>
 							 <p id="markerPhone"> </p>
 						 </div>
 					 </div>
