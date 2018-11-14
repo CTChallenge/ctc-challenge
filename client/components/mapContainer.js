@@ -17,31 +17,17 @@ export class MapContainer extends Component {
       pharmacies: [],
       treatmentCenters: [],
       activeMarker: {},
+      treatmentLL: [],
     };
     this.onMarkerClick = this.onMarkerClick.bind(this)
   }
 
   componentDidMount(){
 
-    // axios.get('https://data.ct.gov/resource/wvv7-dnrt.json')
-    // .then((res) => {
-    //   console.log(res.data);
-      
-    // })
-
-    
-    // let locations = [];
-    
-    
-    
     
       
     //do this if naloxone tab is active
     this.getPharmaciesRequest('https://data.ct.gov/resource/wvv7-dnrt.json')
-
-    //do this if treatment centers tab is active
-    this.getTreatmentCentersRequest("https://data.ct.gov/resource/htz8-fxbk.json")
-    
     
     
     //if location services are enabled, zoom in to user's current location
@@ -58,13 +44,6 @@ export class MapContainer extends Component {
              })
           }
         }
-      async formatTreatmentCenter() {
-        res = await axios.get('https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=' + process.env.GOOGLEKEY)
-        .then((res) => {
-          return (res.data.results[0].geometry.location.lat);
-        })
-      }
-
      onMarkerClick(props, marker, e) {
 		//  console.log(props);
 		 document.getElementById("markerTitle").innerHTML = props.title;
@@ -97,17 +76,8 @@ export class MapContainer extends Component {
 
       async getTreatmentCentersRequest(url)  {
         const res = await axios.get(url);
-        
-        const locations = res.data.map((element) => {
-          return {
-             position: {
-               lat: this.formatTreatmentCenter(),
-               lng: 50
-             },
-             
-           }
-         });
-         this.setState({treatmentCenters:locations})
+        //  let treatmentLocations =  Promise.all(promises)
+         this.setState({treatmentCenters:res.data})
        }
 
       
@@ -124,31 +94,11 @@ export class MapContainer extends Component {
           >
           </Marker>
         })
-        console.log(pharmacyMarkers);
         return pharmacyMarkers;
       }
-
-      createTreatmentCenterMarkers(){
-        let createTreatmentCenterMarkers = this.state.treatmentCenters.map(ele => {
-          return <Marker onClick={this.onMarkerClick}></Marker>
-        })
-      }
-
-      
       render() {
-        let pharmaciesToDisplay;
-        if(true){
-          pharmaciesToDisplay = this.createPharmacyMarkers()
-        }
-        if(true){
-          treatmentCentersToDisplay = this.createTreatmentCenterMarkers()
-        }
-        let treatmentCentersToDisplay;
-        console.log(this.state);
-        
-        // console.log(locationsTomap);
-        
-    
+        let pharmaciesToDisplay = this.createPharmacyMarkers()
+
     return (
       <Map google={this.props.google} zoom={this.state.zoom} 
         initialCenter={{
@@ -161,13 +111,6 @@ export class MapContainer extends Component {
         }}>
 
         {pharmaciesToDisplay}
-        {treatmentCentersToDisplay}
-        
-        <InfoWindow>
-          <div>
-            
-          </div>
-        </InfoWindow>
       </Map>
     );
   }
