@@ -171,7 +171,7 @@ nav li {
 	 color:white;
 	 height: 3vmax;
 	 top: 4.5vw;
-	 vertical-align: middle;
+	 vertical-align: text-top;
 }
 
 #emergency-top-collapsed{
@@ -182,7 +182,7 @@ nav li {
 	 color:white;
 	 height: 3vmax;
 	 top: 4.5vw;
-	 vertical-align: middle;
+	 vertical-align: text-top;
 }
 
 
