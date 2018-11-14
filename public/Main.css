@@ -42,8 +42,8 @@ html, body {
 
 footer {	
 	 clear: both;
-	 color: rgb(0,255,255);
-	 background-color: black;
+	 color: rgb(0,160,255);
+	 background-color: #242424;
 	 font-size:2vw;
 	 padding: 0.4em;
 	 text-align: center;	
@@ -189,7 +189,7 @@ nav li {
 	 background-color: #242424;
 	 position: fixed;
 	 float:top;
-	 top:0px;
+	 top:-15px;
 	 width:100vw;
 }
 
@@ -307,7 +307,7 @@ nav li {
 	 /*height: 8vw; */
 	 height: 1.5vmax;
 	 border: 0px;
-	 top: 4.25vw;
+	 top: 4.5vw;
 	 overflow: hidden;
 	 align-items: center;
 	 align-content: center;

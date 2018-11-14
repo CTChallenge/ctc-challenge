@@ -40,8 +40,8 @@ export default class Home extends Component {
 							 <span class="icon-bar"></span>  
 						 </button>
 					 </div>
-					 <Navbar.Collapse>
-						 <Nav>
+					 <Navbar.Collapse >
+						 <Nav id="myNavbar">
 							 <NavItem href="#">Home</NavItem>
 							 <NavItem href="../overdoseGuide.html">What to do?</NavItem>
 							 <NavItem href="../Data.html">Data</NavItem>
