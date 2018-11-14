@@ -20,7 +20,6 @@ export default class Home extends Component {
 
 	 handleShow() {
 		 this.setState({ show: true });
-		 console.log("handleShow??");
 	 }
 
 	 componentDidMount() {
@@ -33,12 +32,7 @@ export default class Home extends Component {
 	 render() {
 		 return (
 			 <div>
-			 
 				 <Navbar inverse fixedTop fluid>
-					 <Navbar.Header>
-						 <Navbar.Brand>CT's Good Samaritan</Navbar.Brand>
-					 <Navbar.Toggle />
-					 </Navbar.Header>
 					 <Navbar.Collapse>
 						 <Nav>
 							 <NavItem href="#">Home</NavItem>
