@@ -171,7 +171,20 @@ nav li {
 	 color:white;
 	 height: 3vmax;
 	 top: 4.5vw;
+	 vertical-align: middle;
 }
+
+#emergency-top-collapsed{
+	 font-size: 1.5vmax;
+	 font-weight: 900;
+	 margin: auto;
+	 margin-right:50px; 
+	 color:white;
+	 height: 3vmax;
+	 top: 4.5vw;
+	 vertical-align: middle;
+}
+
 
 .modal p {
 	font-size:16px;
@@ -191,6 +204,7 @@ nav li {
 	 float:top;
 	 top:-15px;
 	 width:100vw;
+	 z-index: 2;
 }
 
 #description {
