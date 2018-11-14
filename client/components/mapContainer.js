@@ -22,6 +22,8 @@ export class MapContainer extends Component {
      }
 
 	 componentDidMount(){
+     console.log(process.env);
+     
 
 		 // axios.get('https://data.ct.gov/resource/wvv7-dnrt.json')
 		 // .then((res) => {
