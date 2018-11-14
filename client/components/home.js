@@ -124,7 +124,7 @@ render() {
 			 <div className="row">
               {/* <!-- Google Maps Section--> */}
               {/* <!--  <div className="col-sm-8"> --> */}
-              <div className="col-8">
+              <div id="mapsContainer"  className="col-8">
 					{/* <!-- Buttons --> */}
 					<div id="button-container">
 						  <button>Naloxone</button>
@@ -141,9 +141,9 @@ render() {
               <div id="markerInfo" className="col-5">
                 {/* <!-- Name of the Marker, Address and Hours --> */}
                  <div className="align-middle">
-					  <p id="markerTitle"> </p>
-					  <p id="markerAddress"> </p>
-					  <p id="markerPhone"> </p>
+					 <p id="markerTitle"> </p>
+					 <p id="markerAddress"> </p>
+					 <p id="markerPhone"> </p>
 				 </div>
 			 </div>
     <button id="emergency" type="button" className="btn btn-danger btn-lg btn-block" href="#" data-toggle="modal" data-target="#myModal">
