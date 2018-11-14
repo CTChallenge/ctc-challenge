@@ -14,7 +14,6 @@ module.exports = {
   },
   devtool: 'source-map',
   mode: 'production',
-  REACT_APP_GOOGLKEY: JSON.stringify(process.env.REACT_APP_GOOGLKEY),
   module: {
     rules: [
       {
