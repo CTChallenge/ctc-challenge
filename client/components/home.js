@@ -34,6 +34,9 @@ export default class Home extends Component {
 			 <div>
 				 <Navbar inverse fixedTop fluid>
 					 <div class="navbar-header">
+						<NavItem>
+							 <button id="emergency-top" type="button" className="btn btn-danger navbar-btn" href="#"  onClick={this.handleShow}>Overdose/Emergency</button>
+						 </NavItem>
 						 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 							 <span class="icon-bar"></span>
 							 <span class="icon-bar"></span>
@@ -52,6 +55,7 @@ export default class Home extends Component {
 							 </NavItem>
 						 </Nav>
 					 </Navbar.Collapse>
+					 
 				 </Navbar>
 
 				 <div>
