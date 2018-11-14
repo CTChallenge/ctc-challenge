@@ -169,8 +169,8 @@ nav li {
 	 margin: auto;
 	 margin-right:20px; 
 	 color:white;
-	 height: 60px;
-	 top: 6.5vw;
+	 height: 1.5vmax;
+	 top: 4.5vw;
 }
 
 .modal p {
