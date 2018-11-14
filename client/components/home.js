@@ -114,35 +114,33 @@ export default class Home extends Component {
 				 <br />
 				 {/* <!-- Source : https://www.w3schools.com/html/html_responsive.asp --> */}
 				 <div id="main-content" className="container-fluid">
-					 <table style = "width:80%">
-						 <tr className="row">
-						  {/* <!-- Google Maps Section--> */}
-						  {/* <!--  <div className="col-sm-8"> --> */}
-							 <div id="mapsContainer"  className="col-8">
-								 {/* <!-- Buttons --> */}
-								 <div id="button-container">
-									 <button>Naloxone</button>
-									 <span> </span>
-									 <button>Treatment Centers</button>
-								 </div>
-								 <div id="googleMap">
-									 <MapContainer />
-								 </div>
-								 {/* <!-- Google Map Display --> */}
-							 </tr>
-
-							 {/* <!--  <div id="markerInfo" className="col-sm-5 align-right"> --> */}
-							 <tr id="markerInfo" className="col-5">
-								 {/* <!-- Name of the Marker, Address and Hours --> */}
-								 <p id="markerTitle"> Provider </p>
-								 <p id="markerAddress"> </p>
-								 <p id="markerPhone"> </p>
+					 <div className="row">
+					  {/* <!-- Google Maps Section--> */}
+					  {/* <!--  <div className="col-sm-8"> --> */}
+						 <div id="mapsContainer"  className="col-8">
+							 {/* <!-- Buttons --> */}
+							 <div id="button-container">
+								 <button>Naloxone</button>
+								 <span> </span>
+								 <button>Treatment Centers</button>
 							 </div>
-							 <button id="emergency" type="button" className="btn btn-danger btn-lg btn-block" href="#" data-toggle="modal" data-target="#myModal">
-								 Emergency Overdose Crisis
-							 </button>
-						 </tr>
-					 </table>
+							 <div id="googleMap">
+								 <MapContainer />
+							 </div>
+							 {/* <!-- Google Map Display --> */}
+						 </div>
+
+						 {/* <!--  <div id="markerInfo" className="col-sm-5 align-right"> --> */}
+						 <div id="markerInfo" className="col-4">
+							 {/* <!-- Name of the Marker, Address and Hours --> */}
+							 <p id="markerTitle"> Provider </p>
+							 <p id="markerAddress"> </p>
+							 <p id="markerPhone"> </p>
+						 </div>
+						 <button id="emergency" type="button" className="btn btn-danger btn-lg btn-block" href="#" data-toggle="modal" data-target="#myModal">
+							 Emergency Overdose Crisis
+						 </button>
+					 </div>
 				 </div>
 			 </div>
 		 );
