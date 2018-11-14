@@ -121,8 +121,8 @@ nav li {
 
 #googleMap {
 	 position: relative;
-	 width:60vw; 
-	 height:60vw; 
+	 width:80%; 
+	 height:80%; 
 	 overflow: hidden; 
 	 margin-left:auto; 
 	 margin-right:auto;
@@ -132,7 +132,7 @@ nav li {
 }
 
 #mapsContainer{
-	 
+	 float: left;
 }
 
 
@@ -235,10 +235,11 @@ nav li {
 
 
  /* For mobile phones: */
-    [class*="col-"] {
-        width: 45%;
-    }
+[class*="col-"] {
+	 width: 45%;
+}
 
+/* For Pcs */
 @media only screen and (min-width: 768px) {
 	/* Breakpoints */
 	.col-1 {width: 25%;}
