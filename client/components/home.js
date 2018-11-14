@@ -43,12 +43,11 @@ export default class Home extends Component {
 							 <span class="icon-bar"></span>  
 						 </button>
 					 </div>
-					 <Navbar.Collapse  id="myNavbar">
-						 <ul class="nav navbar-nav">
-							 <li class="active" style="font-size:2.5vw;"><a href="">Home</a></li>
-							 <li style="font-size:2.5vw;"><a href="../overdoseGuide.html">What to do?</a></li>
-							 <li style="font-size:2.5vw;"><a href="../Data.html">Data</a></li>
-						 </ul>
+					 <Navbar.Collapse >
+						 <Nav id="myNavbar">
+							 <NavItem href="#">Home</NavItem>
+							 <NavItem href="../overdoseGuide.html">What to do?</NavItem>
+						 </Nav>
 						 <Nav pullRight>
 							 <NavItem>
 								 <button id="emergency-top" type="button" className="btn btn-danger navbar-btn" href="#"  onClick={this.handleShow}>Overdose/Emergency</button>
