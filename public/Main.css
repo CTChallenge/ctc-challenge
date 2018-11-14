@@ -6,8 +6,6 @@ html, body {
 	background-color: #263238;
 }
 
-
-
 .center{
 	 display: block;
 	 margin-left:auto;
@@ -132,7 +130,6 @@ nav li {
 	 border-radius: 20px;
 }
 
-
 /* .col-sm-5 {
 	 border: 3px solid #00E676;
 	 margin-top: 3.67%;
@@ -144,7 +141,6 @@ nav li {
 	 vertical-align: middle;
 	 margin-left: 3%;
 } */
-
 
 .align-middle {
 	 height: 45%; 
@@ -184,7 +180,7 @@ nav li {
 	 text-align:center;
 	 font-family: Verdana, Tahoma, sans-serif;
 	 position: relative;
-	 top:6.5vw;
+	 top:0;
 	 margin:auto;
 	 color: #95a5a6;
 }
@@ -295,6 +291,7 @@ nav li {
 	 width: 100vw;
 	 height: 8vw;
 	 border: 0px;
+	 top: vw;
 	 align-items: center;
 	 align-content: center;
 }
