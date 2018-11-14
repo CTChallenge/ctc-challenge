@@ -121,9 +121,10 @@ render() {
           <br />
           {/* <!-- Source : https://www.w3schools.com/html/html_responsive.asp --> */}
           <div id="main-content" className="container-fluid">
-			<div className="row">
+			 <div className="row">
               {/* <!-- Google Maps Section--> */}
-              <div className="col-sm-8">
+              {/* <!--  <div className="col-sm-8"> --> */}
+              <div id="mapsContainer"  className="col-8">
 					{/* <!-- Buttons --> */}
 					<div id="button-container">
 						  <button>Naloxone</button>
@@ -136,40 +137,22 @@ render() {
                 {/* <!-- Google Map Display --> */}
               </div>
 
-              <div id="markerInfo" className="col-sm-5 align-right">
+			  {/* <!--  <div id="markerInfo" className="col-sm-5 align-right"> --> */}
+              <div id="markerInfo" className="col-5">
                 {/* <!-- Name of the Marker, Address and Hours --> */}
-                <div className="align-middle">
-					  <p id="markerTitle"> </p>
-					  <p id="markerAddress"> </p>
-					  <p id="markerPhone"> </p>
-				</div>
+                 <div className="align-middle">
+					 <p id="markerTitle"> </p>
+					 <p id="markerAddress"> </p>
+					 <p id="markerPhone"> </p>
+				 </div>
+			 </div>
+				 <button id="emergency" type="button" className="btn btn-danger btn-lg btn-block" href="#" data-toggle="modal" data-target="#myModal">
+					 Emergency Overdose Crisis
+				 </button>
 
-    {/* <!-- The Marker Info --> */}
-    <p id="markerParagraph">
-							 Your team is charged with creating an application that provides useful information to families and
-							 addicts in an integrated form.  For example, an application might provide an integrated geolocation
-							 based display of treatment resources available— or perhaps directions to the nearest Pharmacy
-							 equipped to distribute Naloxone. The specific content you choose to display in your app, and the
-							 manner in which you display the content to the user is up to you and your team. <br /><br />
-
-							 Jason Adding text  just to make sure that the scroll bar is working perfectly fine. Added a bit more
-							 text....... then a bit	 more.... then Jason added a lot more text just to ensure that everything was working
-							 fine. And eventually he added so much text that the text field scroll bar became the size of an ant....
-      <br /> <br />
-							 Unfortunately he was still not satisfied and continue to add more and more text. And This is why this
-							 paragraph is ridiculously long. Just so that Jason could efficiently test out the scroll bar feature and make
-							 sure it doesn't affect the layout. Yup.... that's the reason. Thank you for reading.
-    </p>
-
-
-              </div>
-    <button id="emergency" type="button" className="btn btn-danger btn-lg btn-block" href="#" data-toggle="modal" data-target="#myModal">
-   Emergency Overdose Crisis
-    </button>
-
-  </div>
-  </div>
-      </div>
-    );
-  }
+		 </div>
+		 </div>
+		 </div>
+         );
+     }
 }
