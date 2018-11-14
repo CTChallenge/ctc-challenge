@@ -206,18 +206,6 @@ nav li {
 	 top: 130px;
 }
 
-#markerInfo{
-	 border: 3px solid #00E676;
-	 /* margin-top: 3.67%; */
-	 /* position: relative; */
-	 float: right;
-	 border-radius: 20px;
-	 height: 20vw;
-	 /* width: 25vw; */
-	 background-color: white;
-	 /* vertical-align: middle; */
-	 margin-left: 3%;
-}
 
 #markerTitle {
 	 font-size:2.5vw; 
@@ -239,7 +227,6 @@ nav li {
 
  /* For mobile phones: */
 @media only screen and (max-width: 768px) {
-	 .col-8 {width: 50%;}
 	 
 	 #markerInfo{
 		 border: 3px solid #00E676;
@@ -255,6 +242,12 @@ nav li {
 		 /* vertical-align: middle; */
 		 /* margin-left: 3%; */
 	}
+
+	 #mapsContainer{
+	 
+		 height:40vw;
+		 width:100%;
+	 }
 }
 
 /* For Desktops */
@@ -263,7 +256,6 @@ nav li {
 	.col-1 {width: 15%;}
 	.col-2 {width: 20%;}
 	.col-3 {width: 25%;}
-	.col-4 {width: 30%;}
 	.col-5 {width: 35%;}
 	.col-6 {width: 40%;}
 	.col-7 {width: 45%;}
@@ -272,6 +264,28 @@ nav li {
 	.col-10 {width: 60%;}
 	.col-11 {width: 65%;}
 	.col-12 {width: 70%;}
+	
+	#markerInfo{
+		 border: 3px solid #00E676;
+		 /* margin-top: 3.67%; */
+		 margin-left: auto;
+		 margin-right: auto;
+		 /* position: relative; */
+		 float: right;
+		 border-radius: 20px;
+		 width: 30vw;
+		 height: 45vw;
+		 background-color: white;
+		 /* vertical-align: middle; */
+		 /* margin-left: 3%; */
+	}
+	
+	 #mapsContainer{
+		 float: left;
+		 height:40vw;
+		 width:40vw;
+	 }
+	
 }
 
 .navbar {
