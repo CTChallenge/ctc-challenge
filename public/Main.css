@@ -94,7 +94,8 @@ nav li {
 
 #main-content {
 	 position: relative;
-	 top: 135px;
+	 /* top: 135px; */
+	 top: 10%;
 	 /* background-color: #37474F; */
 	 border: 0px;
 	 padding-bottom: 5vh;
@@ -129,12 +130,6 @@ nav li {
 	 /* padding-right: 20px;  */
 	 border: 3px solid #00E5FF;
 	 border-radius: 20px;
-}
-
-#mapsContainer{
-	 float: left;
-	 height:40vw;
-	 width:40vw;
 }
 
 
@@ -226,7 +221,16 @@ nav li {
 
 
  /* For mobile phones: */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
+	 
+	 
+	 #mapsContainer{
+		 margin-left: auto;
+		 margin-right: auto;
+		 height:70vw;
+		 width:100%;
+	 }
+	 
 	 
 	 #markerInfo{
 		 border: 3px solid #00E676;
@@ -234,36 +238,44 @@ nav li {
 		 margin-left: auto;
 		 margin-right: auto;
 		 /* position: relative; */
-		 float: right;
 		 border-radius: 20px;
-		 width: 80%;
+		 width: 100%;
 		 height: 30%;
 		 background-color: white;
 		 /* vertical-align: middle; */
 		 /* margin-left: 3%; */
 	}
 
-	 #mapsContainer{
-	 
-		 height:40vw;
-		 width:100%;
+	 #markerTitle {
+		 font-size:3.5vw; 
+		 /* overflow: hidden;  */
+		 text-align:center; 
+		 text-decoration: underline;
 	 }
+
+	 #markerAddress {
+		 text-align:center;
+		 font-size:2.4vw;
+	 }
+
+	 #markerPhone {
+		 text-align:center;
+		 font-size:2.4vw;
+	 }
+
+	 
+	 
 }
 
 /* For Desktops */
-@media only screen and (min-width: 768px) {
-	/* Breakpoints */
-	.col-1 {width: 15%;}
-	.col-2 {width: 20%;}
-	.col-3 {width: 25%;}
-	.col-5 {width: 35%;}
-	.col-6 {width: 40%;}
-	.col-7 {width: 45%;}
-	.col-8 {width: 50%;}
-	.col-9 {width: 55%;}
-	.col-10 {width: 60%;}
-	.col-11 {width: 65%;}
-	.col-12 {width: 70%;}
+@media only screen and (min-width: 900px) {
+
+	 #mapsContainer{
+		 float: left;
+		 height:60vw;
+		 width:60vw;
+	 }
+	
 	
 	#markerInfo{
 		 border: 3px solid #00E676;
@@ -280,12 +292,23 @@ nav li {
 		 /* margin-left: 3%; */
 	}
 	
-	 #mapsContainer{
-		 float: left;
-		 height:40vw;
-		 width:40vw;
+	 #markerTitle {
+		 font-size:2.5vw; 
+		 /* overflow: hidden;  */
+		 text-align:center; 
+		 text-decoration: underline;
 	 }
-	
+
+	 #markerAddress {
+		 text-align:center;
+		 font-size:1.6vw;
+	 }
+
+	 #markerPhone {
+		 text-align:center;
+		 font-size:1.6vw;
+	 }
+	 
 }
 
 .navbar {
