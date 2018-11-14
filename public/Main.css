@@ -95,7 +95,7 @@ nav li {
 
 #main-content {
 	position: relative;
-	/* top: 135px; */
+	top: 135px;
 	/* background-color: #37474F; */
 	border: 0px;
 	padding-bottom: 5vh;
@@ -216,14 +216,6 @@ nav li {
 #markerPhone {
 	text-align:center;
 	font-size:1.6vw;
-}
-
-#markerParagraph {
-	font-size:1.55vw;
-	text-indent:40px; 
-	overflow-y : scroll; 
-	height: 50%; 
-	border-top: 1px solid black;
 }
 
 /* Breakpoints */
