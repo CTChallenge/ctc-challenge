@@ -132,15 +132,15 @@ nav li {
 }
 
 .col-sm-5 {
-	border: 3px solid #00E676;
-	margin-top: 3.67%;
-	position: relative;
-	border-radius: 20px;
-	height: 70vh;
-	width: 25vw;
-	background-color: white;
-	vertical-align: middle;
-	margin-left: 3%;
+	 border: 3px solid #00E676;
+	 margin-top: 3.67%;
+	 position: relative;
+	 border-radius: 20px;
+	 height: 70vh;
+	 width: 25vw;
+	 background-color: white;
+	 vertical-align: middle;
+	 margin-left: 3%;
 }
 
 .align-middle {
@@ -177,25 +177,25 @@ nav li {
 }
 
 #title {
-	font-size:4vw; 
-	text-align:center;
-	font-family: Verdana, Tahoma, sans-serif;
-	position: relative;
-	top:8vh;
-	margin:auto;
-	color: #95a5a6;
+	 font-size:4vw; 
+	 text-align:center;
+	 font-family: Verdana, Tahoma, sans-serif;
+	 position: relative;
+	 top:8vh;
+	 margin:auto;
+	 color: #95a5a6;
 }
 
 #description {
-	font-size: 1.5vw;
-	text-align: center;
-	font-family: Verdana, Tahoma, sans-serif;
-	font-weight: 500;
-	position: relative;
-	color: #BBDEFB;
-	margin: auto;
-	padding: 10px 20px;
-	top: 130px;
+	 font-size: 1.5vw;
+	 text-align: center;
+	 font-family: Verdana, Tahoma, sans-serif;
+	 font-weight: 500;
+	 position: relative;
+	 color: #BBDEFB;
+	 margin: auto;
+	 padding: 10px 20px;
+	 top: 130px;
 }
 
 #markerInfo{
@@ -210,13 +210,13 @@ nav li {
 }
 
 #markerAddress {
-	text-align:center;
-	font-size:1.6vw;
+	 text-align:center;
+	 font-size:1.6vw;
 }
 
 #markerPhone {
-	text-align:center;
-	font-size:1.6vw;
+	 text-align:center;
+	 font-size:1.6vw;
 }
 
 /* Breakpoints */
@@ -224,7 +224,7 @@ nav li {
 .col-2 {width: 30%;}
 .col-3 {width: 35%;}
 .col-4 {width: 40%;}
-.col-5 {width: 45%;}
+.col-5 {width: 45%;height: 45%;}
 .col-6 {width: 50%;}
 .col-7 {width: 55%;}
 .col-8 {width: 60%;}
@@ -235,36 +235,39 @@ nav li {
 
 
 .navbar {
-	position: fixed;
-	width: 100vw;
-	border: 0px;
-	align-items: center;
-	align-content: center;
+	 position: fixed;
+	 width: 100vw;
+	 border: 0px;
+	 align-items: center;
+	 align-content: center;
 }
 
 
 
 .navbar-nav li a {
-	line-height: 60px;
-	font-size: 1.7vmax;
-   }
+	 line-height: 60px;
+	 font-size: 1.7vmax;
+ }
 
 
 /*breakpoint needed when emergency button and menu buttons touch this text, around*/
-.navbar-brand
-{
-    position: absolute;
-    width: 100%;
-	clear:both;
-    text-align: center;
-	margin:0 auto;
-	font-size: 3vmin;
-	font-weight: 600;
-	/*make a breakpoint that fixes removes line-height on mobile*/
-	line-height: 60px;
-	
-	
+.navbar-brand{
+     position: absolute;
+     width: 100%;
+	 clear:both;
+     text-align: center;
+	 margin:0 auto;
+	 font-size: 3vmin;
+	 font-weight: 600;
+	 /*make a breakpoint that fixes removes line-height on mobile*/
+	 line-height: 60px;
 }
+
 .navbar-toggle {
-    /* z-index:30; */
+     /* z-index:30; */
 }
+
+
+
+
+
