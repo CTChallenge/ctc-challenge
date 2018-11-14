@@ -50,6 +50,7 @@ footer {
 	 position: fixed;
 	 display:block;
 	 float:bottom;
+	 width:100%;
 	 bottom:0px;
 }
 
@@ -189,6 +190,7 @@ nav li {
 	 position: fixed;
 	 float:top;
 	 top:0px;
+	 width:100%;
 }
 
 #description {
