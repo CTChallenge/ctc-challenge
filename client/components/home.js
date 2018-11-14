@@ -123,8 +123,7 @@ render() {
           <div id="main-content" className="container-fluid">
 			<div className="row">
               {/* <!-- Google Maps Section--> */}
-              {/* <!--  <div className="col-sm-8"> --> */}
-              <div className="col-8">
+              <div className="col-sm-8">
 					{/* <!-- Buttons --> */}
 					<div id="button-container">
 						  <button>Naloxone</button>
@@ -137,8 +136,7 @@ render() {
                 {/* <!-- Google Map Display --> */}
               </div>
 
-			  {/* <!--  <div id="markerInfo" className="col-sm-5 align-right"> --> */}
-              <div id="markerInfo" className="col-5 align-right">
+              <div id="markerInfo" className="col-sm-5 align-right">
                 {/* <!-- Name of the Marker, Address and Hours --> */}
                 <div className="align-middle">
 					  <p id="markerTitle"> </p>
