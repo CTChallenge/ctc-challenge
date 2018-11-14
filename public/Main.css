@@ -47,7 +47,7 @@ footer {
 	 font-size:2vw;
 	 padding: 0.4em;
 	 text-align: center;	
-	 position: relative;
+	 position: static;
 	 display:block;
 	 float:bottom;
 	 bottom:0px;
