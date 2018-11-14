@@ -47,7 +47,7 @@ footer {
 	 font-size:2vw;
 	 padding: 0.4em;
 	 text-align: center;	
-	 position: static;
+	 position: fixed;
 	 display:block;
 	 float:bottom;
 	 bottom:0px;
@@ -115,6 +115,7 @@ nav li {
 #button-container {
 	 text-align:center; 
 	 height:3vw;
+	 display : none; /* Hiding the buttons */
 }
 
 /* #button-container button {
@@ -185,7 +186,7 @@ nav li {
 	 font-family: Verdana, Tahoma, sans-serif;
 	 text-align: center;	
 	 background-color: #242424;
-	 position: static;
+	 position: fixed;
 	 float:top;
 	 top:0px;
 }
@@ -200,6 +201,12 @@ nav li {
 	 margin: auto;
 	 padding: 10px 20px;
 	 top: 8.5vw;
+}
+
+#descriptionTitle {
+	 font-size:4.75vw;
+	 text-align:center;
+	 text-decoration: underline;
 }
 
  /* For mobile phones: */
