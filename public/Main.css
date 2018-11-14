@@ -49,6 +49,7 @@ footer {
 	 text-align: center;	
 	 position: fixed;
 	 overflow:hidden;
+	 display:block;
 }
 
 table, th, td {
@@ -188,6 +189,7 @@ nav li {
 	 margin-top:0px;
 	 background-color: #242424;
 	 overflow:hidden;
+	 display:block;
 }
 
 #description {
