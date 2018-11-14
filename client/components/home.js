@@ -33,13 +33,10 @@ export default class Home extends Component {
 	 render() {
 		 return (
 			 <div>
-				 <header>
-					 <h1 id="title">Connecticut's Good Samaritan</h1>
-				 </header>
 			 
 				 <Navbar inverse fixedTop fluid>
 					 <Navbar.Header>
-						 /* <Navbar.Brand>CT's Good Samaritan</Navbar.Brand> */
+						 <Navbar.Brand>CT's Good Samaritan</Navbar.Brand>
 					 <Navbar.Toggle />
 					 </Navbar.Header>
 					 <Navbar.Collapse>
@@ -96,7 +93,7 @@ export default class Home extends Component {
 							 <ol type="1">
 								 <li>Into the Nose with an Intranasal Spray
 									 <ul>
-										 <li>Tilt the person's head back and provide support under the next with one hand.</li>
+										 <li>Tilt the person's head back and provide support under the neck with one hand.</li>
 										 <li>Insert the nozzle of the spray into the person's nose.</li>
 										 <li>Press the plunger firmly to administer a dose of NARCAN Nasal Spray</li>
 									 </ul>
@@ -117,33 +114,35 @@ export default class Home extends Component {
 				 <br />
 				 {/* <!-- Source : https://www.w3schools.com/html/html_responsive.asp --> */}
 				 <div id="main-content" className="container-fluid">
-					 <div className="row">
-					  {/* <!-- Google Maps Section--> */}
-					  {/* <!--  <div className="col-sm-8"> --> */}
-						 <div id="mapsContainer"  className="col-8">
-							 {/* <!-- Buttons --> */}
-							 <div id="button-container">
-								 <button>Naloxone</button>
-								 <span> </span>
-								 <button>Treatment Centers</button>
-							 </div>
-							 <div id="googleMap">
-								 <MapContainer />
-							 </div>
-							 {/* <!-- Google Map Display --> */}
-						 </div>
+					 <table style = "width:80%">
+						 <tr className="row">
+						  {/* <!-- Google Maps Section--> */}
+						  {/* <!--  <div className="col-sm-8"> --> */}
+							 <div id="mapsContainer"  className="col-8">
+								 {/* <!-- Buttons --> */}
+								 <div id="button-container">
+									 <button>Naloxone</button>
+									 <span> </span>
+									 <button>Treatment Centers</button>
+								 </div>
+								 <div id="googleMap">
+									 <MapContainer />
+								 </div>
+								 {/* <!-- Google Map Display --> */}
+							 </tr>
 
-						 {/* <!--  <div id="markerInfo" className="col-sm-5 align-right"> --> */}
-						 <div id="markerInfo" className="col-5">
-							 {/* <!-- Name of the Marker, Address and Hours --> */}
-							 <p id="markerTitle"> Provider </p>
-							 <p id="markerAddress"> </p>
-							 <p id="markerPhone"> </p>
-						 </div>
-						 <button id="emergency" type="button" className="btn btn-danger btn-lg btn-block" href="#" data-toggle="modal" data-target="#myModal">
-							 Emergency Overdose Crisis
-						 </button>
-					 </div>
+							 {/* <!--  <div id="markerInfo" className="col-sm-5 align-right"> --> */}
+							 <tr id="markerInfo" className="col-5">
+								 {/* <!-- Name of the Marker, Address and Hours --> */}
+								 <p id="markerTitle"> Provider </p>
+								 <p id="markerAddress"> </p>
+								 <p id="markerPhone"> </p>
+							 </div>
+							 <button id="emergency" type="button" className="btn btn-danger btn-lg btn-block" href="#" data-toggle="modal" data-target="#myModal">
+								 Emergency Overdose Crisis
+							 </button>
+						 </tr>
+					 </table>
 				 </div>
 			 </div>
 		 );
