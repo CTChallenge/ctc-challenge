@@ -141,7 +141,7 @@ render() {
               <div id="markerInfo" className="col-5">
                 {/* <!-- Name of the Marker, Address and Hours --> */}
                  <div className="align-middle">
-					 <p id="markerTitle"> </p>
+					 <p id="markerTitle"> Provider </p>
 					 <p id="markerAddress"> </p>
 					 <p id="markerPhone"> </p>
 				 </div>
