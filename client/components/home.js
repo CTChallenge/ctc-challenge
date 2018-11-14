@@ -33,6 +33,14 @@ export default class Home extends Component {
 		 return (
 			 <div>
 				 <Navbar inverse fixedTop fluid>
+					 <div class="navbar-header">
+						 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							 <!-- Gives me the lines in the button-->
+							 <span class="icon-bar"></span>
+							 <span class="icon-bar"></span>
+							 <span class="icon-bar"></span>  
+						 </button>
+					 </div>
 					 <Navbar.Collapse>
 						 <Nav>
 							 <NavItem href="#">Home</NavItem>
@@ -48,7 +56,7 @@ export default class Home extends Component {
 				 </Navbar>
 
 				 <div>
-					 <h4 id="description">If you or a loved one is struggling with opioid addiction, we want to help.<br />Check out the map below to find resources near you.</h4>
+					 <h4 id="description"><br/><br/><br/><br/>If you or a loved one is struggling with opioid addiction, we want to help.<br />Check out the map below to find resources near you.</h4>
 				 </div>
 
 				 {/* <!-- Modal --> */}
