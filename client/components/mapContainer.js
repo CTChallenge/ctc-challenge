@@ -61,6 +61,8 @@ export class MapContainer extends Component {
 		 this.setState({
 			 activeMarker: marker,
 		 });
+      
+     }
      
      async getPharmaciesRequest(url)  {
        const res = await axios.get(url);
