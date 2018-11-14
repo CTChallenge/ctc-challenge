@@ -47,7 +47,6 @@ footer {
 	 font-size:2vw;
 	 padding: 0.4em;
 	 text-align: center;	
-	 margin-bottom:0px;
 	 position: fixed;
 	 overflow:hidden;
 }
@@ -182,12 +181,12 @@ nav li {
 #title{
 	 font-size:4vw; 
 	 font-family: Verdana, Tahoma, sans-serif;
-	 position: absolute;
+	 text-align: center;	
+	 position: fixed;
 	 margin-left:auto;
 	 margin-right:auto;
 	 margin-top:0px;
-	 background-color: #242438;
-	 text-align: center;	
+	 background-color: #242424;
 	 overflow:hidden;
 }
 
@@ -204,7 +203,7 @@ nav li {
 }
 
  /* For mobile phones: */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 500px) {
 	 
 	 
 	 #mapsContainer{
@@ -251,7 +250,7 @@ nav li {
 }
 
 /* For Desktops */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 500px) {
 
 	 #mapsContainer{
 		 float: left;
