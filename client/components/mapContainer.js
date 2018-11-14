@@ -51,17 +51,20 @@ export class MapContainer extends Component {
      }
 
      onMarkerClick(props, marker, e) {
-		 //console.log(props);
+		 console.log(props);
 		 document.getElementById("markerTitle").innerHTML = props.title;
 		 var htmlText = "<b>Address:</b> <br/> "+props.address +",<br/>"+ props.city + ", CT "+ props.zip.substring(0,5);
 		 document.getElementById("markerAddress").innerHTML = htmlText;
 		 htmlText = "<b>Phone:</b> <a href=tel:"+props.phone+">"+props.phone+"</a>" ;
 		 document.getElementById("markerPhone").innerHTML =  htmlText;
 		 
+		 this.state.currentLocation.lat = props.latitude;
+		 
+		 this.state.currentLocation.long = props.longitude;
+		 
 		 this.setState({
 			 activeMarker: marker,
 		 });
-      
      }
      
      async getPharmaciesRequest(url)  {
@@ -105,9 +108,7 @@ export class MapContainer extends Component {
 			 return <Marker onClick={this.onMarkerClick}></Marker>
          })
 	 }
-	 
-	 
-      
+	      
      render() {
          let pharmaciesToDisplay;
          if(true){
