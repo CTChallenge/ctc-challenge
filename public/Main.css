@@ -99,6 +99,8 @@ nav li {
 	 /* background-color: #37474F; */
 	 border: 0px;
 	 padding-bottom: 5vh;
+	 padding-left: 10%;
+	 padding-right: 10%;
 }
 
 .container-fluid button {
@@ -128,9 +130,11 @@ nav li {
 	 /* padding-right: 20px;  */
 	 border: 3px solid #00E5FF;
 	 border-radius: 20px;
-	 padding-left:10%
 }
 
+#mapsContainer{
+	 
+}
 .col-sm-5 {
 	 border: 3px solid #00E676;
 	 margin-top: 3.67%;
@@ -224,7 +228,7 @@ nav li {
 .col-2 {width: 30%;}
 .col-3 {width: 35%;}
 .col-4 {width: 40%;}
-.col-5 {width: 45%;height: 45%;}
+.col-5 {width: 45%;}
 .col-6 {width: 50%;}
 .col-7 {width: 55%;}
 .col-8 {width: 60%;}
