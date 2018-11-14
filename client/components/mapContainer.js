@@ -58,11 +58,9 @@ export class MapContainer extends Component {
 		 htmlText = "<b>Phone:</b> <a href=tel:"+props.phone+">"+props.phone+"</a>" ;
 		 document.getElementById("markerPhone").innerHTML =  htmlText;
 		 
-		  this.setState({
+		 this.setState({
 			 activeMarker: marker,
-		  });
-      
-     }
+		 });
      
      async getPharmaciesRequest(url)  {
        const res = await axios.get(url);
@@ -105,7 +103,8 @@ export class MapContainer extends Component {
 			 return <Marker onClick={this.onMarkerClick}></Marker>
          })
 	 }
-
+	 
+	 
       
      render() {
          let pharmaciesToDisplay;
