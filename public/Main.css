@@ -251,6 +251,7 @@ nav li {
 .navbar {
 	 position: fixed;
 	 width: 100vw;
+	 height: 20vw;
 	 border: 0px;
 	 align-items: center;
 	 align-content: center;
