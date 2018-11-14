@@ -15,9 +15,7 @@ export class MapContainer extends Component {
       },
       zoom: 9,
       pharmacies: [],
-      treatmentCenters: [],
       activeMarker: {},
-      treatmentLL: [],
     };
     this.onMarkerClick = this.onMarkerClick.bind(this)
   }
@@ -26,7 +24,7 @@ export class MapContainer extends Component {
 
     
       
-    //do this if naloxone tab is active
+    //call api
     this.getPharmaciesRequest('https://data.ct.gov/resource/wvv7-dnrt.json')
     
     
@@ -45,7 +43,6 @@ export class MapContainer extends Component {
           }
         }
      onMarkerClick(props, marker, e) {
-		//  console.log(props);
 		 document.getElementById("markerTitle").innerHTML = props.title;
 		 
 		 
