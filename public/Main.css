@@ -47,8 +47,7 @@ footer {
 	 font-size:2vw;
 	 padding: 0.4em;
 	 text-align: center;	
-	 position: fixed;
-	 overflow:hidden;
+	 position: relative;
 	 display:block;
 }
 
@@ -180,16 +179,10 @@ nav li {
 }
 
 #title{
-	 clear: both;
 	 font-size:4vw; 
 	 font-family: Verdana, Tahoma, sans-serif;
 	 text-align: center;	
-	 position: fixed;
-	 margin-left:auto;
-	 margin-right:auto;
-	 margin-top:0px;
 	 background-color: #242424;
-	 display:block;
 }
 
 #description {
@@ -297,10 +290,11 @@ nav li {
 .navbar {
 	 position: fixed;
 	 width: 100vw;
-	 /* height: 8vw; */
+	 /*height: 8vw; */
 	 height: 1.5vmax;
 	 border: 0px;
-	 top: 4vw;
+	 top: 4.25vw;
+	 overflow: hidden;
 	 align-items: center;
 	 align-content: center;
 }
