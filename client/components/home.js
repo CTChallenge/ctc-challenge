@@ -139,12 +139,10 @@ render() {
 
 			  {/* <!--  <div id="markerInfo" className="col-sm-5 align-right"> --> */}
               <div id="markerInfo" className="col-5">
-                {/* <!-- Name of the Marker, Address and Hours --> */}
-                 <div className="align-middle">
-					 <p id="markerTitle"> Provider </p>
-					 <p id="markerAddress"> </p>
-					 <p id="markerPhone"> </p>
-				 </div>
+                 {/* <!-- Name of the Marker, Address and Hours --> */}
+				 <p id="markerTitle"> Provider </p>
+				 <p id="markerAddress"> </p>
+				 <p id="markerPhone"> </p>
 			 </div>
 				 <button id="emergency" type="button" className="btn btn-danger btn-lg btn-block" href="#" data-toggle="modal" data-target="#myModal">
 					 Emergency Overdose Crisis
