@@ -41,7 +41,7 @@ html, body {
 }
 
 footer {	
-	 clear: left;
+	 clear: both;
 	 color: rgb(0,255,255);
 	 background-color: black;
 	 font-size:2vw;
@@ -180,6 +180,7 @@ nav li {
 }
 
 #title{
+	 clear: both;
 	 font-size:4vw; 
 	 font-family: Verdana, Tahoma, sans-serif;
 	 text-align: center;	
