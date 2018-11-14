@@ -179,7 +179,7 @@ nav li {
 	 font-size:4vw; 
 	 text-align:center;
 	 font-family: Verdana, Tahoma, sans-serif;
-	 position: relative;
+	 position: fixed;
 	 top:0;
 	 margin:auto;
 	 color: #95a5a6;
@@ -289,9 +289,10 @@ nav li {
 .navbar {
 	 position: fixed;
 	 width: 100vw;
-	 height: 8vw;
+	 /* height: 8vw; */
+	 height: 1.7vmax;
 	 border: 0px;
-	 top: 2vw;
+	 top: 6vw;
 	 align-items: center;
 	 align-content: center;
 }
