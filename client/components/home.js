@@ -35,7 +35,6 @@ export default class Home extends Component {
 				 <Navbar inverse fixedTop fluid>
 					 <div class="navbar-header">
 						 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-							 <!-- Gives me the lines in the button-->
 							 <span class="icon-bar"></span>
 							 <span class="icon-bar"></span>
 							 <span class="icon-bar"></span>  
